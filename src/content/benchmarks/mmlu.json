@@ -1,0 +1,23 @@
+{
+  "name": "MMLU",
+  "fullName": "Massive Multitask Language Understanding",
+  "publisher": "UC Berkeley",
+  "description": "Massive Multitask Language Understanding, covering 57 subjects across STEM, the humanities, the social sciences, and more.",
+  "link": "https://github.com/hendrycks/test",
+  "tags": ["LLM","General Knowledge","Reasoning"],
+  "lastUpdated": "2025-12-25",
+  "metrics":{
+    "unit": "Accuracy(%)",
+    "isBetterHigher": true
+  },
+  "snapshot":[
+    {"model":"GPT-4o","score":88.7,"publisher":"OpenAI"},
+    {"model":"Claude 3.5/Sonnet","score":88.2,"publisher":"Anthropic"},
+    {"model":"Llama 3.1/405B","score":87.3,"publisher":"Meta"}
+  ],
+  "trending":{
+    "view": 0,
+    "initialWeight": 5000,
+    "score": 5120
+  }
+}

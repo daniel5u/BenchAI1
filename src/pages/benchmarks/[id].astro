@@ -1,0 +1,93 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import LeaderBoardChart from "../../components/LeaderboardChart";
+import '../../styles/global.css';
+import type { loadRenderers } from "astro:container";
+
+// 1.Generate all the path for benchmarks
+export async function getStaticPaths(){
+  const benchmarks = await getCollection('benchmarks');
+  return benchmarks.map(entry => ({
+    params: {id:entry.id},
+    props: {entry},
+  }));
+}
+
+// 2.Get data for specific page
+const { entry } = Astro.props;
+const { name, fullName, description, publisher, lastUpdated, tags, metrics, snapshot, link} = entry.data;
+
+// 3.Calculate the SOTA for the graph
+const sotaScore = Math.max(...snapshot.map(s => s.score));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{name} Benchmark</title>
+  </head>
+
+  <body class="bg-slate-50 min-h-screen pb-20">
+    <nav class="max-w-5xl mx-auto px-6 py-10">
+      <a href="/" class="group flex items-center gap-2 text-slate-400 hover:text-indigo-600 transition-colors">
+        <span class="text-lg group-hover:-translate-x-1 transition-transform">←</span>
+        <span class="font-bold uppercase tracking-widest text-ts">Back</span>
+      </a>
+    </nav>
+   
+    <main class="max-w-5xl mx-auto px-6">
+      <!-- Info Header(Full width) -->
+       <header class="text-center mb-16">
+        
+        <!-- Name of the benchmark -->
+        <h1 class="text-5xl font-black text-slate-900 mb-3">{name}</h1>
+        <!-- Full name of the benchmark (if exists) -->
+        {fullName && <h1 class="text-3xl font-black text-slate-900 mb-6">{fullName}</h1>}
+        <!-- Tags of the benchmark -->
+        <div class="inline-flex gap-2 mb-4">
+          {tags.map(tag => (
+            <span class="px-2 py-0.5 bg-slate-100 text-slate-500 font-bold uppercase rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <!-- Description of the benchmark -->
+        <p class="max-w-3xl mx-auto text-xl text-slate-500 italic leading-relaxed">
+          "{description}"
+        </p>
+       </header>
+
+      <!-- Main Action Info -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 border-y border-slate-200 py-3">
+        <!-- Publisher -->
+        <div class="text-center">
+          <div class="text-[10px] font-black text-slate-300 uppercase tracking-tighter mb-1">Publisher</div>
+          <div class="text-sm font-bold text-slate-700">{publisher}</div>
+        </div>
+        <!-- Updated Time -->
+        <div class="text-center border-x border-slate-200">
+          <div class="text-[10px] font-black text-slate-300 uppercase tracking-tighter mb-1">Last Sync</div>
+          <div class="text-sm font-bold text-slate-700">{lastUpdated}</div>
+        </div>
+        <!-- Link -->
+        <div class="text-center">
+          <div class="text-[10px] font-black text-slate-300 uppercase tracking-tighter mb-1">Official Site</div>
+          <a href={link} target="_blank" class="text-sm font-bold text-indigo-600 hover:underline">Link ↗</a>
+        </div>
+      </div>
+
+      <!-- LeaderBoardChart -->
+      <div class="mb-20">
+        <div class="flex justify-between items-end mb-4">
+          <h2 class="text-sm font-black uppercase tracking-widest text-slate-400">Benchmark Snapshot(For reference Only)</h2>
+        </div>
+        <LeaderBoardChart
+          client:load
+          snapshot={snapshot}
+          unit={metrics.unit}
+          isBetterHigher={metrics.isBetterHigher}
+        />
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BenchmarkCard from '../components/BenchmarkCard';
+import "../styles/global.css";
+
+const allBenchmarks = await getCollection('benchmarks');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BenchAI1 | AI Benchmark Navigator</title>
+  </head>
+  
+  <body class="bg-slate-50 min-h-screen">
+    <main class="max-w-6xl mx-auto px-4 py-12">
+      {/* Header Section */}
+      <header class="mb-12 border-b border-slate-200 pb-8 text-center">
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+          BenchAI1
+        </h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          Automated navigation for global AI Benchmarks. Tracking the gap between SOTA and others.
+        </p>
+      </header>
+
+      {/* Grid Layout */}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {allBenchmarks.map(item => (
+          <BenchmarkCard 
+            id={item.id}
+            name={item.data.name}
+            publisher={item.data.publisher}
+            lastUpdated={item.data.lastUpdated}
+            tags={item.data.tags}
+          />
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
