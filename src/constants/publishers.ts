@@ -4,13 +4,13 @@ export interface PublisherInfo {
 }
 
 export const PUBLISHER_REGISTRY: Record<string, PublisherInfo> = {
-  "OpenAI":{
-    color:"#1f1f1f",
-    logo:"/logos/openai.svg"
+  "OpenAI": {
+    color: "#1f1f1f",
+    logo: "/logos/openai.svg"
   },
-  "Google":{
-    color:"#34a853",
-    logo:"/logos/google.svg"
+  "Google": {
+    color: "#34a853",
+    logo: "/logos/google.svg"
   },
   "Anthropic": {
     color: "#cc785c",
@@ -18,55 +18,55 @@ export const PUBLISHER_REGISTRY: Record<string, PublisherInfo> = {
   },
   "Meta": {
     color: "#0668E1",
-  	logo: "/logos/meta.svg"
+    logo: "/logos/meta.svg"
   },
   "Mistral": {
-    color: "#FD7E14", 
+    color: "#FD7E14",
     logo: "/logos/mistral.svg"
   },
   "DeepSeek": {
     color: "#2243e6",
     logo: "/logos/deepseek.svg"
   },
-  "Kimi":{
+  "Kimi": {
     color: "#047afe",
     logo: "/logos/kimi.svg"
   },
-  "Grok":{
+  "xAI": {
     color: "#736cd3",
-    logo: "/logos/grok.svg"
+    logo: "/logos/xai.svg"
   },
-  "MiniMax":{
+  "MiniMax": {
     color: "#eb3568",
     logo: "/logos/minimax.svg"
   },
-  "Qwen":{
+  "Qwen": {
     color: "#623ce5",
     logo: "/logos/qwen.svg"
   },
-  "Nvidia":{
+  "Nvidia": {
     color: "#86b737",
     logo: "/logos/nvidia.svg"
   },
-  "Zai":{
+  "Zai": {
     color: "#1c7ff8",
     logo: "/logos/zai.svg"
   },
-  "Microsoft":{
+  "Microsoft": {
     color: "#74b71b",
     logo: "/logos/microsoft.svg"
   },
-  "AWS":{
+  "AWS": {
     color: "#ff9900",
     logo: "/logos/aws.svg"
   },
-  "ByteDance":{
+  "ByteDance": {
     color: "#74e1de",
     logo: "/logos/bytedance.svg"
   }
 };
 
 export const DEFAULT_PUBLISHER: PublisherInfo = {
-  color:"#94a3b8",
-  logo:"logos/generics.svg"
+  color: "#94a3b8",
+  logo: "/logos/generics.svg"
 }

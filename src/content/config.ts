@@ -1,7 +1,9 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from 'astro/loaders';
+import { z } from "astro/zod";
 
 const benchmarks = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: "*.json", base: "./src/content/benchmarks" }),
   schema: z.object({
     name: z.string(),
     fullName: z.string().nullable(),
@@ -15,18 +17,42 @@ const benchmarks = defineCollection({
       isBetterHigher: z.boolean().default(true),
     }),
     snapshot: z.array(z.object({
-      model: z.string(),
+      modelRef: z.string(),
       score: z.number(),
-      publisher: z.string().optional()
     })),
     trending: z.object({
       views: z.number().default(0),
       initialWeight: z.number().default(0),
-      score: z.number().default(0),
     }).optional(),
+    isFromAA: z.boolean().optional(),
+    AALink: z.string().optional(),
   }),
+});
+
+const models = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "./src/content/models" }),
+  schema: z.object({
+    name: z.string(),
+    publisher: z.string(),
+    params: z.string().optional(),
+    license: z.string().optional(),
+    website: z.string().optional(),
+    discussionId: z.string().optional()
+  })
+});
+
+const publishers = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/publishers" }),
+  schema: z.object({
+    "name": z.string(),
+    "color": z.string(),
+    "logo": z.string(),
+    "website": z.string().optional()
+  })
 });
 
 export const collections = {
   'benchmarks': benchmarks,
+  'models': models,
+  'publishers': publishers,
 }

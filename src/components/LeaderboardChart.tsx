@@ -1,37 +1,36 @@
 import React from "react";
 import { DEFAULT_PUBLISHER, PUBLISHER_REGISTRY } from "../constants/publishers";
 
-interface SnapshotItem{
+interface SnapshotItem {
   model: string;
   score: number;
-  publisher?: string;
+  publisherInfo: PublisherInfo | null;
 }
 
-interface Props{
+interface PublisherInfo {
+  color: string;
+  logo: string;
+}
+
+interface Props {
   snapshot: SnapshotItem[];
   unit: string;
-  isBetterHigher: boolean;
 }
 
-export default function LeaderBoardChart({ snapshot, unit, isBetterHigher }: Props){
-  // 1.Logic: Identify the SOTA (which is the 'BEST' score)
-  const scores = snapshot.map(s => s.score);
-  const sotaScore = isBetterHigher ? Math.max(...scores) : Math.min(...scores);
+export default function LeaderBoardChart({ snapshot, unit }: Props) {
+  // Get the highest column
+  const maxValInSet = Math.max(...snapshot.map((s) => s.score));
 
-  // 2.Logic: Sort the data to show the best models
-  const sortedData = [...snapshot].sort((a,b) => 
-    isBetterHigher ? b.score-a.score : a.score-b.score
-  );
-
-  // 3.Chart Scaling: set the BEST bar as 100%
-  const maxValInSet = Math.max(...scores);
+  // Set default information for model
+  const defaultColor = "#94a3b8";
+  const defaultLogo = "/logos/unknown.svg";
 
   return (
-    <div className="w-full bg-white border border-slate-200 rounded-lg p-6 overflow-hidden">
+    <div className="w-full bg-white border border-slate-200 rounded-lg p-6">
       <div className="text-center text-[15px] font-bold font-mono text-slate-900">Benchmark Index:{unit}</div>
-      <div className="overflow-x-auto overflow-y-hidden pb-25 pt-10">
+      <div className="overflow-x-auto pb-80 pt-10">
         <div className="relative flex items-end justify-center min-w-max h-64 border-b border-slate-300 px-10">
-          
+
           {/* Background Grid */}
           <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
             {[0, 1, 2, 3, 4].map(i => (
@@ -39,12 +38,12 @@ export default function LeaderBoardChart({ snapshot, unit, isBetterHigher }: Pro
             ))}
           </div>
 
-          {sortedData.map((item) => {
-            // Logic: Display the publisher, DEFAULT when not exists
-            const pubInfo = (item.publisher && PUBLISHER_REGISTRY[item.publisher]) 
-                            || DEFAULT_PUBLISHER;
-            
-            const barHeight = (item.score / maxValInSet) * 100;
+          {snapshot.map((item, index) => {
+            // Logic: Get the color and logo
+            const color = item.publisherInfo?.color || defaultColor;
+            const logo = item.publisherInfo?.logo || defaultLogo;
+
+            const barHeight = (item.score / maxValInSet) * 100
 
             return (
               <div key={item.model} className="relative flex flex-col items-center w-20 group" style={{ height: `${barHeight}%` }}>
@@ -54,27 +53,27 @@ export default function LeaderBoardChart({ snapshot, unit, isBetterHigher }: Pro
                 </div>
 
                 {/* Bar */}
-                <div 
+                <div
                   className="w-10 rounded-t-[5px] transition-all duration-500 hover:brightness-110 h-full"
-                  style={{ backgroundColor: pubInfo.color }}
+                  style={{ backgroundColor: color }}
                 ></div>
 
                 {/* Info Container */}
                 <div className="absolute top-full mt-2 flex flex-col items-center">
                   {/* Display Logo only when exists */}
-                  {pubInfo.logo && (
-                    <img 
-                      src={pubInfo.logo} 
-                      alt="" 
+                  {logo && (
+                    <img
+                      src={logo}
+                      alt=""
                       className="w-4 h-4 object-contain"
                     />
                   )}
-                  
-                  <div 
-                    className="whitespace-nowrap text-[11px] font-mono font-bold text-slate-900"
+
+                  <div
+                    className="whitespace-nowrap text-[12px] font-sans text-black tracking-tight"
                     style={{
-                      transform: `translate(-12px, ${pubInfo.logo ? '30px' : '0px'}) rotate(-62deg)`,
-                      transformOrigin: 'top left'
+                      transform: `translateX(-57%) rotate(-62deg)`,
+                      transformOrigin: 'top right'
                     }}
                   >
                     {item.model.split('/').map((word, i) => (

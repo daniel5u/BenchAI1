@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  /* 图标用 NF */
+  @font-face {
+    font-family: "NF";
+    src: url("/fonts/JetBrainsMono-Regular.woff2") format('woff2');
+    font-display: swap;
+  }
+}
+
+/* 图标选择器可以留在 layer 外面，只要字体声明在 layer 里即可 */
+.icon::before,
+i[class*="nf-"] {
+  font-family: "NF", monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .font-nf {
+    font-family: "NF", monospace !important;
+  }
+}
