@@ -1,0 +1,159 @@
+{
+    "name": "SWE-bench (Bash Only)",
+    "fullName": "SoftWare Engineering Benchmark",
+    "publisher": "Princeton University & University of Chicago",
+    "description": "SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub. Given a codebase and an issue, a language model is tasked with generating a patch that resolves the described problem",
+    "link": "https://www.swebench.com/",
+    "tags": [
+        "Coding",
+        "Agent",
+        "Software Engineer"
+    ],
+    "lastUpdated": "2026-01-12",
+    "metrics": {
+        "unit": "% Resolved",
+        "isBetterHigher": true
+    },
+    "trending": {
+        "view": 0,
+        "initialWeight": 1000
+    },
+    "snapshot": [
+        {
+            "modelRef": "anthropic/claude-opus-4-5-thinking",
+            "score": 74.4
+        },
+        {
+            "modelRef": "google/gemini-3-pro",
+            "score": 74.2
+        },
+        {
+            "modelRef": "openai/gpt-5-2",
+            "score": 71.8
+        },
+        {
+            "modelRef": "anthropic/claude-4-5-sonnet",
+            "score": 70.6
+        },
+        {
+            "modelRef": "openai/gpt-5-2",
+            "score": 69.0
+        },
+        {
+            "modelRef": "anthropic/claude-4-opus",
+            "score": 67.6
+        },
+        {
+            "modelRef": "openai/gpt-5-1-codex",
+            "score": 66.0
+        },
+        {
+            "modelRef": "openai/gpt-5-1",
+            "score": 66.0
+        },
+        {
+            "modelRef": "openai/gpt-5-medium",
+            "score": 65.0
+        },
+        {
+            "modelRef": "anthropic/claude-4-sonnet",
+            "score": 64.93
+        },
+        {
+            "modelRef": "kimi/kimi-k2-thinking",
+            "score": 63.4
+        },
+        {
+            "modelRef": "minimax/minimax-m2",
+            "score": 61.0
+        },
+        {
+            "modelRef": "deepseek/deepseek-v3-2-reasoning",
+            "score": 60.0
+        },
+        {
+            "modelRef": "openai/gpt-5-mini-medium",
+            "score": 59.8
+        },
+        {
+            "modelRef": "openai/o3",
+            "score": 58.4
+        },
+        {
+            "modelRef": "mistral/devstral-small",
+            "score": 56.4
+        },
+        {
+            "modelRef": "alibaba/qwen3-coder-480b-a35b-instruct",
+            "score": 55.4
+        },
+        {
+            "modelRef": "zai/glm-4-6",
+            "score": 55.4
+        },
+        {
+            "modelRef": "zai/glm-4-5",
+            "score": 54.2
+        },
+        {
+            "modelRef": "mistral/devstral-2",
+            "score": 53.8
+        },
+        {
+            "modelRef": "google/gemini-2-5-pro",
+            "score": 53.6
+        },
+        {
+            "modelRef": "anthropic/claude-3-7-sonnet",
+            "score": 52.8
+        },
+        {
+            "modelRef": "openai/o4-mini",
+            "score": 45.0
+        },
+        {
+            "modelRef": "kimi/kimi-k2-0905",
+            "score": 43.8
+        },
+        {
+            "modelRef": "openai/gpt-4-1",
+            "score": 39.58
+        },
+        {
+            "modelRef": "openai/gpt-5-nano-medium",
+            "score": 34.8
+        },
+        {
+            "modelRef": "google/gemini-2-5-flash",
+            "score": 28.73
+        },
+        {
+            "modelRef": "openai/gpt-oss-120b",
+            "score": 26.0
+        },
+        {
+            "modelRef": "openai/gpt-4-1-mini",
+            "score": 23.94
+        },
+        {
+            "modelRef": "openai/gpt-4o",
+            "score": 21.62
+        },
+        {
+            "modelRef": "meta/llama-4-maverick",
+            "score": 21.04
+        },
+        {
+            "modelRef": "google/gemini-2-0-flash",
+            "score": 13.52
+        },
+        {
+            "modelRef": "meta/llama-4-scout",
+            "score": 9.06
+        },
+        {
+            "modelRef": "alibaba/qwen2-5-coder-32b-instruct",
+            "score": 9.0
+        }
+    ]
+}
