@@ -1,0 +1,66 @@
+{
+    "name": "τ-bench",
+    "fullName": null,
+    "publisher": "Sierra",
+    "description": "Benchmarking AI agents in collaborative real-world scenarios. τ-bench challenges agents to coordinate, guide, and assist users in achieving shared objectives across complex enterprise domains",
+    "link": "http://taubench.com/#leaderboard",
+    "tags": [
+        "Agent",
+        "Instruction-Following"
+    ],
+    "lastUpdated": "2026-01-13",
+    "metrics": {
+        "unit": "pass@1(%)",
+        "isBetterHigher": true
+    },
+    "trending": {
+        "view": 0,
+        "initialWeight": 1000
+    },
+    "snapshot": [
+        {
+            "modelRef": "google/gemini-3-pro",
+            "score": 85.4
+        },
+        {
+            "modelRef": "anthropic/claude-4-5-sonnet",
+            "score": 84.7
+        },
+        {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 80.8
+        },
+        {
+            "modelRef": "deepseek/deepseek-v3-2",
+            "score": 80.4
+        },
+        {
+            "modelRef": "openai/gpt-5",
+            "score": 80.0
+        },
+        {
+            "modelRef": "alibaba/qwen3-max",
+            "score": 72.0
+        },
+        {
+            "modelRef": "kimi/kimi-k2",
+            "score": 64.3
+        },
+        {
+            "modelRef": "anthropic/claude-3-7-sonnet",
+            "score": 61.8
+        },
+        {
+            "modelRef": "openai/o4-mini",
+            "score": 56.9
+        },
+        {
+            "modelRef": "openai/gpt-4-1",
+            "score": 54.7
+        },
+        {
+            "modelRef": "openai/gpt-4-1-mini",
+            "score": 53.0
+        }
+    ]
+}
