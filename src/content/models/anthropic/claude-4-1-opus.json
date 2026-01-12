@@ -1,6 +1,7 @@
 {
     "name": "Claude 4.1 Opus (Non-reasoning)",
     "publisher": "anthropic",
+    "release_date": "2025-08-05",
     "params": "",
     "license": "",
     "website": "",

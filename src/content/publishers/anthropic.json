@@ -1,5 +1,6 @@
 {
     "name": "Anthropic",
     "color": "#cc785c",
-    "logo": "/logos/anthropic.svg"
+    "logo": "/logos/anthropic.svg",
+    "website": ""
 }

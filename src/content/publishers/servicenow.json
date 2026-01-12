@@ -1,5 +1,6 @@
 {
     "name": "ServiceNow",
     "color": "#62d84e",
-    "logo": "/logos/servicenow.svg"
+    "logo": "/logos/servicenow.svg",
+    "website": ""
 }

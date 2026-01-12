@@ -1,5 +1,6 @@
 {
     "name": "Microsoft Azure",
     "color": "#74b71b",
-    "logo": "/logos/microsoft.svg"
+    "logo": "/logos/microsoft.svg",
+    "website": ""
 }

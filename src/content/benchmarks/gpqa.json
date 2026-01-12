@@ -8,11 +8,13 @@
         "Scientific",
         "LLM"
     ],
-    "lastUpdated": "2026-01-07",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
     },
+    "isFromAA": true,
+    "AALink": "https://artificialanalysis.ai/evaluations/gpqa-diamond",
     "trending": {
         "views": 0,
         "initialWeight": 1000
@@ -159,10 +161,6 @@
             "score": 80.3
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-1-8",
-            "score": 80.1
-        },
-        {
             "modelRef": "deepseek/deepseek-v3-2-reasoning-0925",
             "score": 79.7
         },
@@ -197,6 +195,10 @@
         {
             "modelRef": "openai/o4-mini",
             "score": 78.4
+        },
+        {
+            "modelRef": "lg/k-exaone",
+            "score": 78.3
         },
         {
             "modelRef": "openai/gpt-oss-120b",
@@ -271,12 +273,16 @@
             "score": 76.4
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-code",
+            "modelRef": "bytedance-seed/doubao-seed-code",
             "score": 76.4
         },
         {
             "modelRef": "alibaba/qwen3-max-preview",
             "score": 76.4
+        },
+        {
+            "modelRef": "prime-intellect/intellect-3",
+            "score": 76.1
         },
         {
             "modelRef": "aws/nova-2-0-omni-reasoning-medium",
@@ -295,11 +301,11 @@
             "score": 75.3
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus",
+            "modelRef": "deepseek/deepseek-v3-2",
             "score": 75.1
         },
         {
-            "modelRef": "deepseek/deepseek-v3-2",
+            "modelRef": "deepseek/deepseek-v3-1-terminus",
             "score": 75.1
         },
         {
@@ -371,7 +377,7 @@
             "score": 72.6
         },
         {
-            "modelRef": "bytedance_seed/seed-oss-36b-instruct",
+            "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 72.6
         },
         {
@@ -453,6 +459,10 @@
         {
             "modelRef": "minimax/minimax-m1-80k",
             "score": 69.7
+        },
+        {
+            "modelRef": "lg/k-exaone-non-reasoning",
+            "score": 69.5
         },
         {
             "modelRef": "motif-technologies/motif-2-12-7b",
@@ -561,6 +571,10 @@
         {
             "modelRef": "mistral/magistral-small-2509",
             "score": 66.3
+        },
+        {
+            "modelRef": "tii-uae/falcon-h1r-7b",
+            "score": 66.1
         },
         {
             "modelRef": "alibaba/qwen3-30b-a3b-2507",
@@ -701,10 +715,6 @@
         {
             "modelRef": "mbzuai/k2-v2-medium",
             "score": 59.8
-        },
-        {
-            "modelRef": "inclusionai/ring-1t",
-            "score": 59.5
         },
         {
             "modelRef": "mistral/devstral-2",
@@ -1394,7 +1404,5 @@
             "modelRef": "deepseek/deepseek-r1-distill-qwen-1-5b",
             "score": 9.8
         }
-    ],
-    "isFromAA": true,
-    "AALink": "https://artificialanalysis.ai/evaluations/gpqa-diamond"
+    ]
 }

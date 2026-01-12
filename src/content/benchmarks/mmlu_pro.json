@@ -9,11 +9,13 @@
         "General",
         "LLM"
     ],
-    "lastUpdated": "2026-01-07",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
     },
+    "isFromAA": true,
+    "AALink": "https://artificialanalysis.ai/evaluations/mmlu-pro",
     "trending": {
         "views": 0,
         "initialWeight": 1000
@@ -128,7 +130,7 @@
             "score": 85.4
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-code",
+            "modelRef": "bytedance-seed/doubao-seed-code",
             "score": 85.4
         },
         {
@@ -145,10 +147,6 @@
         },
         {
             "modelRef": "xai/grok-4-fast-reasoning",
-            "score": 85.0
-        },
-        {
-            "modelRef": "bytedance_seed/doubao-seed-1-8",
             "score": 85.0
         },
         {
@@ -196,6 +194,10 @@
             "score": 84.1
         },
         {
+            "modelRef": "lg/k-exaone",
+            "score": 83.8
+        },
+        {
             "modelRef": "alibaba/qwen3-max-preview",
             "score": 83.8
         },
@@ -212,11 +214,11 @@
             "score": 83.7
         },
         {
-            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
+            "modelRef": "anthropic/claude-4-sonnet",
             "score": 83.7
         },
         {
-            "modelRef": "anthropic/claude-4-sonnet",
+            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
             "score": 83.7
         },
         {
@@ -308,6 +310,10 @@
             "score": 82.2
         },
         {
+            "modelRef": "prime-intellect/intellect-3",
+            "score": 82.2
+        },
+        {
             "modelRef": "inclusionai/ling-1t",
             "score": 82.2
         },
@@ -356,7 +362,7 @@
             "score": 81.5
         },
         {
-            "modelRef": "bytedance_seed/seed-oss-36b-instruct",
+            "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 81.5
         },
         {
@@ -382,6 +388,10 @@
         {
             "modelRef": "nous-research/hermes-4-llama-3-1-70b-reasoning",
             "score": 81.1
+        },
+        {
+            "modelRef": "lg/k-exaone-non-reasoning",
+            "score": 81.0
         },
         {
             "modelRef": "meta/llama-4-maverick",
@@ -418,10 +428,6 @@
         {
             "modelRef": "alibaba/qwen3-vl-30b-a3b-reasoning",
             "score": 80.7
-        },
-        {
-            "modelRef": "inclusionai/ring-1t",
-            "score": 80.6
         },
         {
             "modelRef": "openai/gpt-4-1",
@@ -808,6 +814,10 @@
             "score": 72.7
         },
         {
+            "modelRef": "tii-uae/falcon-h1r-7b",
+            "score": 72.5
+        },
+        {
             "modelRef": "alibaba/qwen3-omni-30b-a3b-instruct",
             "score": 72.5
         },
@@ -816,11 +826,11 @@
             "score": 72.5
         },
         {
-            "modelRef": "google/gemini-2-0-flash-lite-001",
+            "modelRef": "google/gemini-2-5-flash-lite",
             "score": 72.4
         },
         {
-            "modelRef": "google/gemini-2-5-flash-lite",
+            "modelRef": "google/gemini-2-0-flash-lite-001",
             "score": 72.4
         },
         {
@@ -1092,11 +1102,11 @@
             "score": 57.9
         },
         {
-            "modelRef": "ai21-labs/jamba-reasoning-3b",
+            "modelRef": "ai21-labs/jamba-1-7-large",
             "score": 57.7
         },
         {
-            "modelRef": "ai21-labs/jamba-1-7-large",
+            "modelRef": "ai21-labs/jamba-reasoning-3b",
             "score": 57.7
         },
         {
@@ -1379,7 +1389,5 @@
             "modelRef": "google/gemma-3-270m",
             "score": 5.5
         }
-    ],
-    "isFromAA": true,
-    "AALink": "https://artificialanalysis.ai/evaluations/mmlu-pro"
+    ]
 }

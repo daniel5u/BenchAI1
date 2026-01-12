@@ -9,11 +9,13 @@
         "Math",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-07",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
     },
+    "isFromAA": true,
+    "AALink": "https://artificialanalysis.ai/evaluations/aime-2025",
     "trending": {
         "views": 0,
         "initialWeight": 1000
@@ -112,6 +114,10 @@
             "score": 90.7
         },
         {
+            "modelRef": "lg/k-exaone",
+            "score": 90.3
+        },
+        {
             "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
             "score": 89.7
         },
@@ -136,10 +142,6 @@
             "score": 89.3
         },
         {
-            "modelRef": "inclusionai/ring-1t",
-            "score": 89.3
-        },
-        {
             "modelRef": "aws/nova-2-0-pro-reasoning-medium",
             "score": 89.0
         },
@@ -157,6 +159,10 @@
         },
         {
             "modelRef": "anthropic/claude-4-5-sonnet-thinking",
+            "score": 88.0
+        },
+        {
+            "modelRef": "prime-intellect/intellect-3",
             "score": 88.0
         },
         {
@@ -204,11 +210,7 @@
             "score": 84.7
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-1-8",
-            "score": 84.7
-        },
-        {
-            "modelRef": "bytedance_seed/seed-oss-36b-instruct",
+            "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 84.7
         },
         {
@@ -276,11 +278,15 @@
             "score": 80.3
         },
         {
+            "modelRef": "tii-uae/falcon-h1r-7b",
+            "score": 80.0
+        },
+        {
             "modelRef": "lg/exaone-4-0-32b-reasoning",
             "score": 80.0
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-code",
+            "modelRef": "bytedance-seed/doubao-seed-code",
             "score": 79.3
         },
         {
@@ -420,11 +426,11 @@
             "score": 66.7
         },
         {
-            "modelRef": "alibaba/qwen3-30b-a3b-2507",
+            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
             "score": 66.3
         },
         {
-            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
+            "modelRef": "alibaba/qwen3-30b-a3b-2507",
             "score": 66.3
         },
         {
@@ -602,6 +608,10 @@
         {
             "modelRef": "zai/glm-4-6",
             "score": 44.3
+        },
+        {
+            "modelRef": "lg/k-exaone-non-reasoning",
+            "score": 44.0
         },
         {
             "modelRef": "xai/grok-code-fast-1",
@@ -1079,7 +1089,5 @@
             "modelRef": "mistral/mistral-large-2407",
             "score": 0
         }
-    ],
-    "isFromAA": true,
-    "AALink": "https://artificialanalysis.ai/evaluations/aime-2025"
+    ]
 }

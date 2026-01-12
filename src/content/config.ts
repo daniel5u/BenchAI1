@@ -34,6 +34,7 @@ const models = defineCollection({
   schema: z.object({
     name: z.string(),
     publisher: z.string(),
+    releaseDate: z.string().optional(),
     params: z.string().optional(),
     license: z.string().optional(),
     website: z.string().optional(),

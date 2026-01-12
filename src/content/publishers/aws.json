@@ -1,5 +1,6 @@
 {
     "name": "Amazon",
     "color": "#ff9900",
-    "logo": "/logos/aws.svg"
+    "logo": "/logos/aws.svg",
+    "website": ""
 }

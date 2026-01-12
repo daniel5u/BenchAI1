@@ -1,5 +1,6 @@
 {
     "name": "Databricks",
     "color": "#ff3621",
-    "logo": "/logos/databricks.svg"
+    "logo": "/logos/databricks.svg",
+    "website": ""
 }

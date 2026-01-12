@@ -7,11 +7,13 @@
     "tags": [
         "Instruction-Following"
     ],
-    "lastUpdated": "2026-01-07",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
     },
+    "isFromAA": true,
+    "AALink": "https://artificialanalysis.ai/evaluations/ifbench",
     "trending": {
         "views": 0,
         "initialWeight": 1000
@@ -118,6 +120,10 @@
             "score": 67.6
         },
         {
+            "modelRef": "openai/o3-mini-high",
+            "score": 67.1
+        },
+        {
             "modelRef": "openai/gpt-5-low",
             "score": 66.6
         },
@@ -140,6 +146,10 @@
         {
             "modelRef": "openai/gpt-oss-20b",
             "score": 65.1
+        },
+        {
+            "modelRef": "lg/k-exaone",
+            "score": 64.7
         },
         {
             "modelRef": "xiaomi/mimo-v2-flash-reasoning",
@@ -206,10 +216,6 @@
             "score": 56.5
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-1-8",
-            "score": 56.3
-        },
-        {
             "modelRef": "anthropic/claude-4-1-opus-thinking",
             "score": 55.4
         },
@@ -228,6 +234,10 @@
         {
             "modelRef": "zai/glm-4-7-non-reasoning",
             "score": 54.6
+        },
+        {
+            "modelRef": "tii-uae/falcon-h1r-7b",
+            "score": 54.4
         },
         {
             "modelRef": "anthropic/claude-4-5-haiku-reasoning",
@@ -270,7 +280,7 @@
             "score": 52.0
         },
         {
-            "modelRef": "bytedance_seed/doubao-seed-code",
+            "modelRef": "bytedance-seed/doubao-seed-code",
             "score": 51.4
         },
         {
@@ -354,11 +364,11 @@
             "score": 45.6
         },
         {
-            "modelRef": "openai/gpt-5-mini-minimal",
+            "modelRef": "openai/gpt-5-minimal",
             "score": 45.6
         },
         {
-            "modelRef": "openai/gpt-5-minimal",
+            "modelRef": "openai/gpt-5-mini-minimal",
             "score": 45.6
         },
         {
@@ -372,10 +382,6 @@
         {
             "modelRef": "openai/gpt-5-chatgpt",
             "score": 45.0
-        },
-        {
-            "modelRef": "inclusionai/ring-1t",
-            "score": 44.6
         },
         {
             "modelRef": "mistral/magistral-small-2509",
@@ -438,6 +444,10 @@
             "score": 43.0
         },
         {
+            "modelRef": "anthropic/claude-3-5-haiku",
+            "score": 42.8
+        },
+        {
             "modelRef": "anthropic/claude-4-5-sonnet",
             "score": 42.7
         },
@@ -450,7 +460,7 @@
             "score": 42.0
         },
         {
-            "modelRef": "bytedance_seed/seed-oss-36b-instruct",
+            "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 41.9
         },
         {
@@ -546,6 +556,10 @@
             "score": 39.6
         },
         {
+            "modelRef": "lg/k-exaone-non-reasoning",
+            "score": 39.6
+        },
+        {
             "modelRef": "meta/llama-4-scout",
             "score": 39.5
         },
@@ -631,6 +645,10 @@
         },
         {
             "modelRef": "upstage/solar-pro-2-reasoning",
+            "score": 37.1
+        },
+        {
+            "modelRef": "meta/llama-3-instruct-70b",
             "score": 37.1
         },
         {
@@ -726,6 +744,10 @@
             "score": 34.1
         },
         {
+            "modelRef": "prime-intellect/intellect-3",
+            "score": 34.0
+        },
+        {
             "modelRef": "upstage/solar-pro-2",
             "score": 33.7
         },
@@ -807,6 +829,10 @@
         },
         {
             "modelRef": "mistral/mistral-large-2407",
+            "score": 31.6
+        },
+        {
+            "modelRef": "mistral/devstral-small-2505",
             "score": 31.6
         },
         {
@@ -970,6 +996,10 @@
             "score": 24.8
         },
         {
+            "modelRef": "meta/llama-3-instruct-8b",
+            "score": 24.6
+        },
+        {
             "modelRef": "ai2/olmo-2-7b",
             "score": 24.4
         },
@@ -1046,6 +1076,10 @@
             "score": 19.9
         },
         {
+            "modelRef": "mistral/mistral-7b-instruct",
+            "score": 19.9
+        },
+        {
             "modelRef": "ai2/molmo-7b-d",
             "score": 19.7
         },
@@ -1073,7 +1107,5 @@
             "modelRef": "google/gemma-3-270m",
             "score": 12.1
         }
-    ],
-    "isFromAA": true,
-    "AALink": "https://artificialanalysis.ai/evaluations/ifbench"
+    ]
 }

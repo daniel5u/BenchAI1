@@ -1,5 +1,6 @@
 {
     "name": "Google",
     "color": "#34a853",
-    "logo": "/logos/google.svg"
+    "logo": "/logos/google.svg",
+    "website": ""
 }

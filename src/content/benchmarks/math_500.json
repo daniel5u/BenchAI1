@@ -8,11 +8,13 @@
         "Reasoning",
         "Math"
     ],
-    "lastUpdated": "2026-01-07",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
     },
+    "isFromAA": true,
+    "AALink": "https://artificialanalysis.ai/evaluations/math-500",
     "trending": {
         "views": 0,
         "initialWeight": 1000
@@ -255,11 +257,11 @@
             "score": 93.0
         },
         {
-            "modelRef": "google/gemini-2-5-flash-04-2025",
+            "modelRef": "google/gemini-2-5-flash-lite",
             "score": 92.6
         },
         {
-            "modelRef": "google/gemini-2-5-flash-lite",
+            "modelRef": "google/gemini-2-5-flash-04-2025",
             "score": 92.6
         },
         {
@@ -818,7 +820,5 @@
             "modelRef": "meta/llama-2-chat-7b",
             "score": 5.9
         }
-    ],
-    "isFromAA": true,
-    "AALink": "https://artificialanalysis.ai/evaluations/math-500"
+    ]
 }
