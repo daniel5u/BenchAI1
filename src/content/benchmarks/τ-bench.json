@@ -8,7 +8,7 @@
         "Agent",
         "Instruction-Following"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
