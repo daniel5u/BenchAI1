@@ -9,6 +9,7 @@ dependencies = [
     "httpx[socks]>=0.28.1",
     "openai>=2.14.0",
     "pillow>=12.1.0",
+    "playwright>=1.57.0",
     "pydantic>=2.12.5",
     "python-dotenv>=1.2.1",
     "requests>=2.32.5",
