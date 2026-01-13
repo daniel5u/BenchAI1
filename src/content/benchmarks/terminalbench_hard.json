@@ -8,7 +8,7 @@
         "Agent",
         "Terminal"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -593,6 +593,10 @@
             "score": 5.7
         },
         {
+            "modelRef": "openai/o3-mini-high",
+            "score": 5.7
+        },
+        {
             "modelRef": "mistral/mistral-large-2",
             "score": 5.7
         },
@@ -809,6 +813,10 @@
             "score": 2.1
         },
         {
+            "modelRef": "anthropic/claude-3-5-haiku",
+            "score": 2.1
+        },
+        {
             "modelRef": "minimax/minimax-m1-40k",
             "score": 2.1
         },
@@ -913,132 +921,140 @@
             "score": 0.7
         },
         {
+            "modelRef": "meta/llama-3-instruct-70b",
+            "score": 0.7
+        },
+        {
             "modelRef": "aws/nova-lite",
             "score": 0.7
         },
         {
             "modelRef": "google/gemma-3-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "google/gemma-3-270m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/ministral-3b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "azure/phi-4-mini",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "liquidai/lfm2-8b-a1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "liquidai/lfm2-1-2b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "nvidia/nvidia-nemotron-nano-12b-v2-vl",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "nvidia/llama-3-3-nemotron-super-49b-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "nvidia/llama-3-3-nemotron-super-49b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-1-32b-think",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/molmo-7b-d",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-7b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-350m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-nano-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-h-350m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-h-nano-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "reka-ai/reka-flash-3",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "nous-research/hermes-4-llama-3-1-70b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "lg/exaone-4-0-1-2b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "lg/exaone-4-0-1-2b-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai21-labs/jamba-1-7-mini",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-1-7b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-0-6b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-1-7b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-0-6b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-vl-4b-instruct",
-            "score": 0
+            "score": 0.0
+        },
+        {
+            "modelRef": "meta/llama-3-instruct-8b",
+            "score": 0.0
         },
         {
             "modelRef": "meta/llama-3-2-instruct-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "azure/phi-3-mini",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-2-7b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-2-32b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-3-3-8b-instruct",
-            "score": 0
+            "score": 0.0
         }
     ]
 }

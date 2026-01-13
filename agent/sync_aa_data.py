@@ -263,20 +263,30 @@ def sync_llm_data():
             if bench_id not in bench_results:
                 bench_results[bench_id] = []
 
-            display_score = score * 100 if score <= 1.0 else score
-
             bench_results[bench_id].append({
                 "modelRef": model_ref_id,
-                "score": round(display_score, 2)
+                "raw_score": float(score)
                 })
 
     print("Updating benchmarks...")
     for bench_id, snapshot in bench_results.items():
         meta = BENCHMARK_METADATA.get(bench_id)
+        
+        max_score_in_bench = max(item["raw_score"] for item in snapshot)
+        should_multiply = max_score_in_bench <= 1.0
 
         if not meta:
             print(f"Skipping unknown benchmark from API: {bench_id}")
             continue
+
+        # Fixed logic: multiply 100 only when the biggest score <= 1.0 instead of each one
+        for item in snapshot:
+            final_score = item["raw_score"]
+            if should_multiply:
+                final_score *= 100
+
+            item["score"] = round(final_score, 2)
+            del item["raw_score"]
 
         bench_file = BENCH_DIR / f"{bench_id}.json"
         existing_bench_data = load_json_safe(bench_file)

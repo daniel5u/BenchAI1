@@ -9,7 +9,7 @@
         "Math",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -1075,19 +1075,19 @@
         },
         {
             "modelRef": "ai2/molmo-7b-d",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-350m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "meta/llama-3-2-instruct-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/mistral-large-2407",
-            "score": 0
+            "score": 0.0
         }
     ]
 }

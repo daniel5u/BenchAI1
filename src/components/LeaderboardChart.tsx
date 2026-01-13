@@ -43,7 +43,7 @@ export default function LeaderBoardChart({ snapshot, unit }: Props) {
             const color = item.publisherInfo?.color || defaultColor;
             const logo = item.publisherInfo?.logo || defaultLogo;
 
-            const barHeight = (item.score / maxValInSet) * 100
+            const barHeight = item.score 
 
             return (
               <div key={item.model} className="relative flex flex-col items-center w-20 group" style={{ height: `${barHeight}%` }}>

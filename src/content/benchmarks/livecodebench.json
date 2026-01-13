@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true

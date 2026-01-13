@@ -7,7 +7,7 @@
     "tags": [
         "Instruction-Following"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -74,6 +74,10 @@
         {
             "modelRef": "google/gemini-3-pro",
             "score": 70.4
+        },
+        {
+            "modelRef": "openai/o1",
+            "score": 70.3
         },
         {
             "modelRef": "openai/gpt-5-1-codex",

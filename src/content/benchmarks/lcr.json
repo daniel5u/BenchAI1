@@ -8,7 +8,7 @@
         "Long-Context",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -910,203 +910,203 @@
         },
         {
             "modelRef": "google/gemma-3-1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "google/gemma-3n-e4b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "google/gemma-3n-e2b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "google/gemma-3-270m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "azure/phi-4",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "liquidai/lfm2-8b-a1b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "liquidai/lfm2-2-6b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "liquidai/lfm2-1-2b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "upstage/solar-pro-2",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "upstage/solar-pro-2-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "nvidia/llama-3-1-nemotron-nano-4b-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-1-32b-think",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/molmo-7b-d",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-7b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-7b-think",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-350m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ibm/granite-4-0-h-350m",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "reka-ai/reka-flash-3",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "lg/exaone-4-0-1-2b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "lg/exaone-4-0-1-2b-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-1-7b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-0-6b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-1-7b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-omni-30b-a3b-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-0-6b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-omni-30b-a3b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "openai/gpt-4o",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "meta/llama-3-instruct-70b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "meta/llama-3-instruct-8b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/mistral-small-3",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/mistral-7b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/magistral-small",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "mistral/magistral-medium",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "deepseek/deepseek-r1-distill-llama-8b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-2-7b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-2-32b",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "ai2/olmo-3-32b-think",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "zai/glm-4-5v-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "zai/glm-4-5v",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-32b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-32b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-8b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-30b-a3b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-14b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-30b-a3b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-4b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-14b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         },
         {
             "modelRef": "alibaba/qwen3-8b-instruct-reasoning",
-            "score": 0
+            "score": 0.0
         }
     ]
 }
