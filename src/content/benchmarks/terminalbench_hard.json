@@ -8,7 +8,7 @@
         "Agent",
         "Terminal"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -593,6 +593,10 @@
             "score": 5.7
         },
         {
+            "modelRef": "openai/o3-mini-high",
+            "score": 5.7
+        },
+        {
             "modelRef": "mistral/mistral-large-2",
             "score": 5.7
         },
@@ -809,6 +813,10 @@
             "score": 2.1
         },
         {
+            "modelRef": "anthropic/claude-3-5-haiku",
+            "score": 2.1
+        },
+        {
             "modelRef": "minimax/minimax-m1-40k",
             "score": 2.1
         },
@@ -910,6 +918,10 @@
         },
         {
             "modelRef": "meta/llama-3-1-instruct-8b",
+            "score": 0.7
+        },
+        {
+            "modelRef": "meta/llama-3-instruct-70b",
             "score": 0.7
         },
         {
@@ -1018,6 +1030,10 @@
         },
         {
             "modelRef": "alibaba/qwen3-vl-4b-instruct",
+            "score": 0
+        },
+        {
+            "modelRef": "meta/llama-3-instruct-8b",
             "score": 0
         },
         {

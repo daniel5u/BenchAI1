@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -59,10 +59,6 @@
         {
             "modelRef": "openai/gpt-5-2-medium",
             "score": 42.3
-        },
-        {
-            "modelRef": "openai/o3-mini-high",
-            "score": 42.1
         },
         {
             "modelRef": "anthropic/claude-opus-4-5",
@@ -545,6 +541,10 @@
             "score": 17
         },
         {
+            "modelRef": "openai/o3-mini-high",
+            "score": 17
+        },
+        {
             "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 16.4
         },
@@ -853,6 +853,10 @@
             "score": 10.6
         },
         {
+            "modelRef": "anthropic/claude-3-5-haiku",
+            "score": 10.6
+        },
+        {
             "modelRef": "ai2/olmo-3-32b-think",
             "score": 10.5
         },
@@ -981,6 +985,10 @@
             "score": 7
         },
         {
+            "modelRef": "meta/llama-3-instruct-70b",
+            "score": 6.8
+        },
+        {
             "modelRef": "alibaba/qwen3-vl-4b-reasoning",
             "score": 6.7
         },
@@ -1035,6 +1043,10 @@
         {
             "modelRef": "aws/nova-micro",
             "score": 4.1
+        },
+        {
+            "modelRef": "meta/llama-3-instruct-8b",
+            "score": 4
         },
         {
             "modelRef": "azure/phi-4-mini",

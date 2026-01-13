@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-12",
+    "lastUpdated": "2026-01-13",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -1046,6 +1046,10 @@
         },
         {
             "modelRef": "openai/gpt-5-chatgpt",
+            "score": 0
+        },
+        {
+            "modelRef": "mistral/mistral-7b-instruct",
             "score": 0
         },
         {
