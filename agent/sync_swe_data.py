@@ -174,7 +174,7 @@ def sync_swe_data():
 
     bench_id = "swe_bash_only"
     bench_file = BENCH_DIR / f"{bench_id}.json"
-    existing_bench = load_json_safe(bench_file)
+    existing_bench_data = load_json_safe(bench_file)
 
     output_data = {
             "name": SWE_META["name"],
@@ -185,9 +185,20 @@ def sync_swe_data():
             "tags": SWE_META["tags"],
             "lastUpdated": today_str,
             "metrics": SWE_META["metrics"],
-            "trending": existing_bench.get("trending", {"view": 0,"initialWeight": 1000}),
+            "trending": existing_bench_data.get("trending", {"view": 0,"initialWeight": 1000}),
             "snapshot": sorted(bench_snapshot, key=lambda x:x["score"], reverse=True)
             }
+
+    def get_core_content(data):
+        cp = data.copy()
+
+        return cp.get("snapshot",None)
+
+    if get_core_content(output_data) == get_core_content(existing_bench_data):
+        output_data["lastUpdated"] = existing_bench_data.get("lastUpdated", today_str)
+    else:
+        print(f"Update occurs for {bench_id}")
+
 
     save_json(bench_file, output_data)
     print("SWE-bench information sync completed")

@@ -311,6 +311,16 @@ def sync_llm_data():
                     )
                 }
 
+        def get_core_content(data):
+            cp = data.copy()
+
+            return cp.get("snapshot",None)
+
+        if get_core_content(output_data) == get_core_content(existing_bench_data):
+            output_data["lastUpdated"] = existing_bench_data.get("lastUpdated", today_str)
+        else:
+            print(f"Update occurs for {bench_id}")
+
         save_json(bench_file, output_data)
 
     print("Sync complete")
