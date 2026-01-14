@@ -8,7 +8,7 @@
         "Reasoning",
         "Math"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -77,11 +77,11 @@
             "score": 98.2
         },
         {
-            "modelRef": "google/gemini-2-5-flash-reasoning-04-2025",
+            "modelRef": "google/gemini-2-5-flash-reasoning",
             "score": 98.1
         },
         {
-            "modelRef": "google/gemini-2-5-flash-reasoning",
+            "modelRef": "google/gemini-2-5-flash-reasoning-04-2025",
             "score": 98.1
         },
         {

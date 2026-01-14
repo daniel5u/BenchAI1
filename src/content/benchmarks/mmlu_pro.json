@@ -9,7 +9,7 @@
         "General",
         "LLM"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -214,11 +214,11 @@
             "score": 83.7
         },
         {
-            "modelRef": "anthropic/claude-4-sonnet",
+            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
             "score": 83.7
         },
         {
-            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
+            "modelRef": "anthropic/claude-4-sonnet",
             "score": 83.7
         },
         {
@@ -290,11 +290,11 @@
             "score": 82.5
         },
         {
-            "modelRef": "alibaba/qwen3-next-80b-a3b-reasoning",
+            "modelRef": "alibaba/qwen3-max-thinking",
             "score": 82.4
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-next-80b-a3b-reasoning",
             "score": 82.4
         },
         {
@@ -430,11 +430,11 @@
             "score": 80.7
         },
         {
-            "modelRef": "openai/gpt-4-1",
+            "modelRef": "openai/gpt-5-minimal",
             "score": 80.6
         },
         {
-            "modelRef": "openai/gpt-5-minimal",
+            "modelRef": "openai/gpt-4-1",
             "score": 80.6
         },
         {
@@ -1102,11 +1102,11 @@
             "score": 57.9
         },
         {
-            "modelRef": "ai21-labs/jamba-1-7-large",
+            "modelRef": "ai21-labs/jamba-reasoning-3b",
             "score": 57.7
         },
         {
-            "modelRef": "ai21-labs/jamba-reasoning-3b",
+            "modelRef": "ai21-labs/jamba-1-7-large",
             "score": 57.7
         },
         {
@@ -1274,11 +1274,11 @@
             "score": 41.1
         },
         {
-            "modelRef": "meta/llama-2-chat-70b",
+            "modelRef": "meta/llama-2-chat-13b",
             "score": 40.6
         },
         {
-            "modelRef": "meta/llama-2-chat-13b",
+            "modelRef": "meta/llama-2-chat-70b",
             "score": 40.6
         },
         {

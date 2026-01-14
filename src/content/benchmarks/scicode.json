@@ -9,7 +9,7 @@
         "Knowledge",
         "LLM"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -70,11 +70,11 @@
             "score": 44.7
         },
         {
-            "modelRef": "xai/grok-4-1-fast-reasoning",
+            "modelRef": "xai/grok-4-fast-reasoning",
             "score": 44.2
         },
         {
-            "modelRef": "xai/grok-4-fast-reasoning",
+            "modelRef": "xai/grok-4-1-fast-reasoning",
             "score": 44.2
         },
         {
@@ -398,11 +398,11 @@
             "score": 36.0
         },
         {
-            "modelRef": "alibaba/qwen3-vl-235b-a22b-instruct",
+            "modelRef": "alibaba/qwen3-coder-480b-a35b-instruct",
             "score": 35.9
         },
         {
-            "modelRef": "alibaba/qwen3-coder-480b-a35b-instruct",
+            "modelRef": "alibaba/qwen3-vl-235b-a22b-instruct",
             "score": 35.9
         },
         {
@@ -758,11 +758,11 @@
             "score": 28.0
         },
         {
-            "modelRef": "aws/nova-premier",
+            "modelRef": "aws/nova-2-0-omni",
             "score": 27.9
         },
         {
-            "modelRef": "aws/nova-2-0-omni",
+            "modelRef": "aws/nova-premier",
             "score": 27.9
         },
         {
@@ -894,11 +894,11 @@
             "score": 24.3
         },
         {
-            "modelRef": "mistral/mistral-saba",
+            "modelRef": "mistral/magistral-small",
             "score": 24.1
         },
         {
-            "modelRef": "mistral/magistral-small",
+            "modelRef": "mistral/mistral-saba",
             "score": 24.1
         },
         {

@@ -7,7 +7,7 @@
     "tags": [
         "Instruction-Following"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -772,11 +772,11 @@
             "score": 33.5
         },
         {
-            "modelRef": "alibaba/qwen3-vl-30b-a3b-instruct",
+            "modelRef": "alibaba/qwen3-30b-a3b-2507",
             "score": 33.1
         },
         {
-            "modelRef": "alibaba/qwen3-30b-a3b-2507",
+            "modelRef": "alibaba/qwen3-vl-30b-a3b-instruct",
             "score": 33.1
         },
         {

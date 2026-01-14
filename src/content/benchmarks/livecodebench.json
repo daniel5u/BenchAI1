@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -1269,11 +1269,11 @@
             "score": 9.9
         },
         {
-            "modelRef": "meta/llama-2-chat-70b",
+            "modelRef": "meta/llama-2-chat-13b",
             "score": 9.8
         },
         {
-            "modelRef": "meta/llama-2-chat-13b",
+            "modelRef": "meta/llama-2-chat-70b",
             "score": 9.8
         },
         {
