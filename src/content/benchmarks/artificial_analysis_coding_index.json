@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -665,11 +665,11 @@
             "score": 13.7
         },
         {
-            "modelRef": "aws/nova-premier",
+            "modelRef": "aws/nova-2-0-omni",
             "score": 13.6
         },
         {
-            "modelRef": "aws/nova-2-0-omni",
+            "modelRef": "aws/nova-premier",
             "score": 13.6
         },
         {
@@ -945,11 +945,11 @@
             "score": 7.3
         },
         {
-            "modelRef": "alibaba/qwen3-vl-8b-instruct",
+            "modelRef": "alibaba/qwen3-omni-30b-a3b-instruct",
             "score": 7.2
         },
         {
-            "modelRef": "alibaba/qwen3-omni-30b-a3b-instruct",
+            "modelRef": "alibaba/qwen3-vl-8b-instruct",
             "score": 7.2
         },
         {

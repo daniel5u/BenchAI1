@@ -9,7 +9,7 @@
         "Math",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -426,11 +426,11 @@
             "score": 66.7
         },
         {
-            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
+            "modelRef": "alibaba/qwen3-30b-a3b-2507",
             "score": 66.3
         },
         {
-            "modelRef": "alibaba/qwen3-30b-a3b-2507",
+            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
             "score": 66.3
         },
         {

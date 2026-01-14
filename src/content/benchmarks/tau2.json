@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -413,11 +413,11 @@
             "score": 37.4
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus",
+            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
             "score": 37.1
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
+            "modelRef": "deepseek/deepseek-v3-1-terminus",
             "score": 37.1
         },
         {
@@ -545,11 +545,11 @@
             "score": 29.5
         },
         {
-            "modelRef": "alibaba/qwen3-vl-8b-instruct",
+            "modelRef": "alibaba/qwen3-vl-32b-instruct",
             "score": 29.2
         },
         {
-            "modelRef": "alibaba/qwen3-vl-32b-instruct",
+            "modelRef": "alibaba/qwen3-vl-8b-instruct",
             "score": 29.2
         },
         {
@@ -749,11 +749,11 @@
             "score": 21.6
         },
         {
-            "modelRef": "alibaba/qwen3-1-7b-instruct",
+            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
             "score": 21.6
         },
         {
-            "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
+            "modelRef": "alibaba/qwen3-1-7b-instruct",
             "score": 21.6
         },
         {
@@ -997,19 +997,19 @@
             "score": 4.1
         },
         {
-            "modelRef": "google/gemma-3-1b",
-            "score": 0.0
-        },
-        {
             "modelRef": "google/gemma-3n-e2b",
             "score": 0.0
         },
         {
-            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
+            "modelRef": "google/gemma-3-1b",
             "score": 0.0
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-speciale",
+            "score": 0.0
+        },
+        {
+            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
             "score": 0.0
         },
         {
@@ -1021,7 +1021,7 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-3-1-32b-think",
+            "modelRef": "ai2/olmo-3-7b-think",
             "score": 0.0
         },
         {
@@ -1029,7 +1029,7 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-3-7b-think",
+            "modelRef": "ai2/olmo-3-1-32b-think",
             "score": 0.0
         },
         {
@@ -1057,11 +1057,11 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-2-7b",
+            "modelRef": "ai2/olmo-2-32b",
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-2-32b",
+            "modelRef": "ai2/olmo-2-7b",
             "score": 0.0
         },
         {
