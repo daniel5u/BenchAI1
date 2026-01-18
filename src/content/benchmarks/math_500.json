@@ -8,7 +8,7 @@
         "Reasoning",
         "Math"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-18",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -569,11 +569,11 @@
             "score": 71.4
         },
         {
-            "modelRef": "mistral/devstral-medium",
+            "modelRef": "mistral/mistral-small-3-1",
             "score": 70.7
         },
         {
-            "modelRef": "mistral/mistral-small-3-1",
+            "modelRef": "mistral/devstral-medium",
             "score": 70.7
         },
         {

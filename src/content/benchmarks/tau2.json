@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-18",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -73,11 +73,11 @@
             "score": 87.1
         },
         {
-            "modelRef": "minimax/minimax-m2",
+            "modelRef": "openai/gpt-5-codex",
             "score": 86.8
         },
         {
-            "modelRef": "openai/gpt-5-codex",
+            "modelRef": "minimax/minimax-m2",
             "score": 86.8
         },
         {
@@ -245,11 +245,11 @@
             "score": 64.6
         },
         {
-            "modelRef": "xai/grok-4-fast",
+            "modelRef": "xai/grok-4-1-fast",
             "score": 63.7
         },
         {
-            "modelRef": "xai/grok-4-1-fast",
+            "modelRef": "xai/grok-4-fast",
             "score": 63.7
         },
         {
@@ -553,15 +553,19 @@
             "score": 29.2
         },
         {
+            "modelRef": "openai/gpt-4o-2024-08-06",
+            "score": 28.9
+        },
+        {
             "modelRef": "openai/o3-mini",
             "score": 28.7
         },
         {
-            "modelRef": "mistral/devstral-small",
+            "modelRef": "google/gemini-2-5-flash-preview-09-2025",
             "score": 28.4
         },
         {
-            "modelRef": "google/gemini-2-5-flash-preview-09-2025",
+            "modelRef": "mistral/devstral-small",
             "score": 28.4
         },
         {
@@ -623,6 +627,10 @@
         {
             "modelRef": "mistral/magistral-small",
             "score": 26.6
+        },
+        {
+            "modelRef": "inclusionai/ring-1t",
+            "score": 26.3
         },
         {
             "modelRef": "alibaba/qwen3-1-7b-instruct-reasoning",
@@ -761,6 +769,10 @@
             "score": 21.3
         },
         {
+            "modelRef": "ai2/olmo-3-1-32b-instruct",
+            "score": 21.3
+        },
+        {
             "modelRef": "alibaba/qwen3-omni-30b-a3b-reasoning",
             "score": 21.3
         },
@@ -789,11 +801,11 @@
             "score": 20.2
         },
         {
-            "modelRef": "mistral/devstral-medium",
+            "modelRef": "alibaba/qwen3-vl-30b-a3b-reasoning",
             "score": 19.9
         },
         {
-            "modelRef": "alibaba/qwen3-vl-30b-a3b-reasoning",
+            "modelRef": "mistral/devstral-medium",
             "score": 19.9
         },
         {
@@ -1005,11 +1017,11 @@
             "score": 0.0
         },
         {
-            "modelRef": "deepseek/deepseek-v3-2-speciale",
+            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
             "score": 0.0
         },
         {
-            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
+            "modelRef": "deepseek/deepseek-v3-2-speciale",
             "score": 0.0
         },
         {
@@ -1025,11 +1037,11 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/molmo-7b-d",
+            "modelRef": "ai2/olmo-3-1-32b-think",
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-3-1-32b-think",
+            "modelRef": "ai2/molmo-7b-d",
             "score": 0.0
         },
         {
@@ -1057,7 +1069,7 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-2-32b",
+            "modelRef": "ai2/olmo-3-32b-think",
             "score": 0.0
         },
         {
@@ -1065,7 +1077,7 @@
             "score": 0.0
         },
         {
-            "modelRef": "ai2/olmo-3-32b-think",
+            "modelRef": "ai2/olmo-2-32b",
             "score": 0.0
         }
     ]

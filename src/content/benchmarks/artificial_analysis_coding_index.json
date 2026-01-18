@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-18",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -221,11 +221,11 @@
             "score": 28.4
         },
         {
-            "modelRef": "minimax/minimax-m2",
+            "modelRef": "baidu/ernie-5-0-thinking-preview",
             "score": 28.1
         },
         {
-            "modelRef": "baidu/ernie-5-0-thinking-preview",
+            "modelRef": "minimax/minimax-m2",
             "score": 28.1
         },
         {
@@ -521,6 +521,10 @@
             "score": 17.0
         },
         {
+            "modelRef": "inclusionai/ring-1t",
+            "score": 16.5
+        },
+        {
             "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 16.4
         },
@@ -534,6 +538,10 @@
         },
         {
             "modelRef": "alibaba/qwen3-vl-235b-a22b-instruct",
+            "score": 16.2
+        },
+        {
+            "modelRef": "openai/gpt-4o-2024-08-06",
             "score": 16.2
         },
         {
@@ -553,11 +561,11 @@
             "score": 15.6
         },
         {
-            "modelRef": "mistral/devstral-medium",
+            "modelRef": "nous-research/hermes-4-llama-3-1-405b-reasoning",
             "score": 15.5
         },
         {
-            "modelRef": "nous-research/hermes-4-llama-3-1-405b-reasoning",
+            "modelRef": "mistral/devstral-medium",
             "score": 15.5
         },
         {
@@ -665,11 +673,11 @@
             "score": 13.7
         },
         {
-            "modelRef": "aws/nova-2-0-omni",
+            "modelRef": "aws/nova-premier",
             "score": 13.6
         },
         {
-            "modelRef": "aws/nova-premier",
+            "modelRef": "aws/nova-2-0-omni",
             "score": 13.6
         },
         {
@@ -975,6 +983,10 @@
         {
             "modelRef": "nvidia/nvidia-nemotron-nano-12b-v2-vl",
             "score": 5.9
+        },
+        {
+            "modelRef": "ai2/olmo-3-1-32b-instruct",
+            "score": 5.6
         },
         {
             "modelRef": "aws/nova-lite",
