@@ -9,11 +9,14 @@ import icon from 'astro-icon';
 
 import alpinejs from '@astrojs/alpinejs';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), icon(), alpinejs()] 
+  integrations: [react(), icon(), alpinejs()],
+  adapter: vercel()
 });
