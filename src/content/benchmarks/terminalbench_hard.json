@@ -5,8 +5,7 @@
     "description": "An agentic benchmark evaluating AI capabilities in terminal environments through software engineering, system administration, and data processing tasks",
     "link": "https://www.tbench.ai/",
     "tags": [
-        "Agent",
-        "Terminal"
+        "Agent"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

@@ -1,7 +1,7 @@
 {
     "name": "Claude 2.1",
     "publisher": "anthropic",
-    "release_date": "2023-11-21",
+    "releaseDate": "2023-11-21",
     "params": "",
     "license": "",
     "website": "",

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @layer base {
   @font-face {
     font-family: 'JetBrainsMono';
@@ -28,5 +30,37 @@ i[class*="nf-"] {
 @layer utilities {
   .font-nf {
     font-family: "NF", monospace !important;
+  }
+}
+
+@layer components {
+  .doc-content {
+    /* --- 1. 基础设置 --- */
+    @apply prose max-w-none text-base leading-snug;
+
+    /* --- 2. 垂直间距压缩 --- */
+    @apply prose-p:my-3 prose-headings:mt-8 prose-headings:mb-3;
+    @apply prose-ul:my-2 prose-li:my-0 prose-hr:my-6;
+
+    /* --- 3. 颜色覆盖 (黑白高对比) --- */
+    @apply prose-headings:text-black prose-p:text-neutral-800;
+    @apply prose-strong:text-black prose-li:text-neutral-800 prose-code:text-black;
+
+    /* --- 4. 链接风格 --- */
+    @apply prose-a:text-blue-700 prose-a:no-underline hover:prose-a:underline;
+
+    /* --- 5. 去圆角 (极简主义) --- */
+    @apply prose-img:rounded-none prose-pre:rounded-none prose-code:rounded-none;
+    @apply prose-img:border prose-img:border-neutral-200; /* 给图片加个细边框更有质感 */
+
+    /* --- 6. 表格样式 (紧凑型 + 瑞士风格) --- */
+    @apply prose-table:w-full prose-table:border-collapse prose-table:text-sm;
+    @apply prose-thead:border-b-2 prose-thead:border-black;
+    @apply prose-th:text-black prose-th:font-bold prose-th:uppercase prose-th:tracking-wider prose-th:py-2;
+    @apply prose-td:border-b prose-td:border-neutral-200 prose-td:py-2 prose-tr:border-b-0;
+
+    /* --- 7. 引用块 --- */
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-black prose-blockquote:bg-neutral-50;
+    @apply prose-blockquote:px-4 prose-blockquote:py-1 prose-blockquote:my-4 prose-blockquote:not-italic;
   }
 }

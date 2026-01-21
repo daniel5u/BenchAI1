@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BenchmarkExplorer from "../../components/BenchmarkExplorer";
+import Layout from "../../layout/layout.astro";
+
+// Get all the data
+const allBenchmarks = await getCollection("benchmarks");
+
+// Add State Management
+import { useState } from "react";
+---
+
+<Layout title="BenchAI1 | Bench All In One">
+  <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+    <a
+      href="/"
+      class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs"
+    >
+      ← Back to Dashboard
+    </a>
+  </nav>
+  <main class="w-[90%] max-w-7xl mx-auto px-6 pb-20">
+    <header class="mb-12 text-center">
+      <h1 class="text-5xl font-black text-slate-900 mb-4">Benchmark Hub</h1>
+      <p class="text-xl text-slate-500">Explore Different Kins of Benchmarks</p>
+    </header>
+
+    <BenchmarkExplorer client:load allBenchmarks={allBenchmarks} />
+  </main>
+</Layout>

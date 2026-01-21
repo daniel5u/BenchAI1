@@ -1,7 +1,8 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import LeaderBoardChart from "../../components/LeaderboardChart";
 import Layout from "../../layout/layout.astro";
+import { Icon } from "astro-icon/components";
 
 // 1.Generate all the path for benchmarks
 export async function getStaticPaths() {
@@ -17,7 +18,6 @@ const { entry } = Astro.props;
 const {
   name,
   fullName,
-  description,
   publisher,
   lastUpdated,
   tags,
@@ -28,30 +28,36 @@ const {
   AALink,
 } = entry.data;
 
+const docEntry = await getEntry("benchmark-docs", entry.id);
+
+let Content;
+if (docEntry) {
+  const rendered = await render(docEntry);
+  Content = rendered.Content;
+}
+
 // 3.Get the objects of models and publishers from benchmark
 const enrichedSnapshot = await Promise.all(
-  entry.data.snapshot.map(async (item) => {
+  snapshot.map(async (item) => {
     // Get the model
-    const modelEntry = await getEntry("models", item.modelRef);
+    const modelEntry = await getEntry(item.modelRef);
 
     // Detect wrong reference to model
     if (!modelEntry) {
-      console.warn(`Model not found: ${item.modelRef}`);
+      console.warn(`Model not found: ${item.modelRef.id}`);
       return {
-        model: item.modelRef,
+        model: item.modelRef.id,
         score: item.score,
         publisherInfo: null,
       };
     }
 
     // Get the publisher from model
-    const publisherEntry = await getEntry(
-      "publishers",
-      modelEntry.data.publisher,
-    );
+    const publisherEntry = await getEntry(modelEntry.data.publisher);
 
     return {
       model: modelEntry.data.name,
+      modelId: item.modelRef.id,
       score: item.score,
       publisherInfo: publisherEntry ? publisherEntry.data : null,
     };
@@ -64,10 +70,10 @@ const sortedSnapshot = enrichedSnapshot.sort((a, b) => {
 ---
 
 <Layout title={`${name} - BenchAI1`}>
-  <body class="bg-slate-50 min-h-screen pb-20">
-    <nav class="w-[80%] mx-auto px-6 py-10">
+  <body class="bg-[#fffcf2] max-w-7xl min-h-screen pb-20">
+    <nav class="mx-auto px-6 py-10 max-w-7xl text-xs">
       <a
-        href="/"
+        href="/benchmarks"
         class="group flex items-center gap-2 text-slate-400 hover:text-indigo-600 transition-colors"
       >
         <span class="text-lg group-hover:-translate-x-1 transition-transform"
@@ -77,117 +83,138 @@ const sortedSnapshot = enrichedSnapshot.sort((a, b) => {
       </a>
     </nav>
 
-    <main class="w-[80%] mx-auto px-6">
+    <main class="w-full px-6 max-w-7xl mx-auto">
       <!-- Info Header(Full width) -->
-      <header class="text-center mb-8">
-        <!-- Name of the benchmark -->
-        <h1 class="text-5xl font-black text-slate-900 mb-3">{name}</h1>
-        <!-- Full name of the benchmark (if exists) -->
-        {
-          fullName && (
-            <h1 class="text-3xl font-black text-slate-900 mb-6">{fullName}</h1>
-          )
-        }
-        <!-- Tags of the benchmark -->
-        <div class="inline-flex gap-2 mb-4">
-          {
-            tags.map((tag) => (
-              <a
-                href={`/?tag=${tag}`}
-                class="px-3 py-1 bg-indigo-50 text-indigo-600 text-x font-bold rounded-full border border-indigo-100 hover:bg-indigo-600 hover:text-white transition-colors"
+      <header class="mb-8">
+        <div class="flex items-center gap-3 mb-5">
+          <h1 class="text-5xl font-semibold text-black">
+            {fullName ? fullName : name}
+          </h1>
+          <div
+            class="relative inline-block"
+            x-data="{ open: false }"
+            @mouseenter="clearTimeout(timeout); open = true"
+            @mouseleave="timeout = setTimeout(() => open = false, 100)"
+          >
+            <div
+              class="w-5 h-5 rounded-full text-xs grid place-item-center translate-y-1/10"
+            >
+              <Icon name="ph:info-fill" class="w-7 h-7" />
+              <div
+                x-show="open"
+                class="border border-2 border-black absolute left-full top-1/2 translate-x-3 -translate-y-1/2 ml-2 z-50 px-2.5 py-1.5 bg-white max-w-l w-max"
               >
-                {tag}
-              </a>
-            ))
-          }
-        </div>
-        <!-- Description of the benchmark -->
-        <p
-          class="max-w-3xl mx-auto text-xl text-slate-500 italic leading-relaxed"
-        >
-          "{description}"
-        </p>
-      </header>
-
-      {
-        isFromAA && (
-          <div class="flex justify-center">
-            <div class="border-2 border-indigo-200 bg-yellow-50 rounded-lg px-6 py-4 text-center shadow mb-3 inline-block">
-              <p class="text-black text-lg font-medium">
-                The data of this benchmark is from
-                <a
-                  href="https://artificialanalysis.ai/"
-                  target="_blank"
-                  class="text-indigo-500 italic"
-                >
-                  Artificial Analysis
-                </a>
-              </p>
-              <p class="text-black text-lg font-medium">
-                The shown result might be different from the Official Site.
-                <br /> Check
-                <a href={AALink} target="_blank" class="text-indigo-500 italic">
-                  Benchmark Page from Artificial Analysis
-                </a>
-                for more information.
-              </p>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl text-slate-800 italic"
+                    >Benchmark Tags:</span
+                  >
+                  <div class="flex gap-2">
+                    {
+                      tags.map((tag) => (
+                        <a
+                          href={`/?tag=${tag}`}
+                          class="text-xl text-slate-800 italic underline hover:text-indigo-400 transition-colors"
+                        >
+                          {tag}
+                        </a>
+                      ))
+                    }
+                  </div>
+                </div>
+                <!-- Publisher -->
+                <div class="flex items-center gap-2">
+                  <div class="text-xl text-slate-800 italic">Publisher:</div>
+                  <div class="text-xl text-slate-800 italic">{publisher}</div>
+                </div>
+                <!-- Updated Time -->
+                <div class="flex items-center gap-2">
+                  <div class="text-xl text-slate-800 italic">Last Sync:</div>
+                  <div class="text-xl text-slate-800 italic">{lastUpdated}</div>
+                </div>
+                <!-- Link -->
+                <div class="flex items-center gap-2">
+                  <div class="text-xl text-slate-800 italic">
+                    Official Site:
+                  </div>
+                  <a
+                    href={link}
+                    target="_blank"
+                    class="text-xl text-slate-800 italic underline hover:text-indigo-400 transition-colors"
+                  >
+                    Link
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        )
-      }
-
-      <!-- Main Action Info -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 border-y border-slate-200 py-3"
-      >
-        <!-- Publisher -->
-        <div class="text-center">
-          <div
-            class="text-sm font-black text-slate-400 uppercase tracking-tighter mb-1"
-          >
-            Publisher
+        </div>
+        <!-- Documentation Container -->
+        {
+          Content && (
+            <div class="w-full">
+              <div class="max-h-[600px] overflow-y-auto border-2 border-slate-200 rounded px-6 custom-scrollbar bg-white">
+                <article class="doc-content">
+                  <Content />
+                </article>
+              </div>
+            </div>
+          )
+        }
+        <!-- LeaderBoardChart -->
+        <div class="mt-5 mb-20">
+          <div class="flex justify-center items-end mb-4 gap-1">
+            <h2 class="text-xl font-bold uppercase tracking-widest">
+              Benchmark Snapshot
+            </h2>
+            <div>
+              {
+                isFromAA && (
+                  <div class="group relative">
+                    <div class="rounded-full text-xs grid">
+                      <Icon name="ph:info-fill" class="w-6 h-6 " />
+                      <div class="absolute inset-x-0 inset-y-[-100%] left-[50%] w-[200%] h-[200%] -translate-x-1/2 pointer-events-none group-hover:pointer-events-auto z-40" />
+                      <div class="border border-2 border-black absolute left-full top-1/2 -translate-y-1/2 ml-2 hidden group-hover:block px-2.5 py-1.5 bg-white max-w-l w-max">
+                        <div class="flex">
+                          <div class="xt-center inline-block">
+                            <p class="text-black text-lg font-medium">
+                              The data of this benchmark is from
+                              <a
+                                href="https://artificialanalysis.ai/"
+                                target="_blank"
+                                class="text-indigo-500 italic"
+                              >
+                                Artificial Analysis
+                              </a>
+                            </p>
+                            <p class="text-black text-lg font-medium">
+                              The shown result might be different from the
+                              Official Site.
+                              <br /> Check
+                              <a
+                                href={AALink}
+                                target="_blank"
+                                class="text-indigo-500 italic"
+                              >
+                                Benchmark Page from Artificial Analysis
+                              </a>
+                              for more information.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+            </div>
           </div>
-          <div class="text-sm font-bold text-slate-700">{publisher}</div>
+          <LeaderBoardChart
+            client:load
+            snapshot={sortedSnapshot}
+            unit={metrics.unit}
+          />
         </div>
-        <!-- Updated Time -->
-        <div class="text-center border-x border-slate-200">
-          <div
-            class="text-sm font-black text-slate-400 uppercase tracking-tighter mb-1"
-          >
-            Last Sync
-          </div>
-          <div class="text-sm font-bold text-slate-700">{lastUpdated}</div>
-        </div>
-        <!-- Link -->
-        <div class="text-center">
-          <div
-            class="text-sm font-black text-slate-400 uppercase tracking-tighter mb-1"
-          >
-            Official Site
-          </div>
-          <a
-            href={link}
-            target="_blank"
-            class="text-sm font-bold text-indigo-600 hover:underline">Link ↗</a
-          >
-        </div>
-      </div>
-
-      <!-- LeaderBoardChart -->
-      <div class="mb-20">
-        <div class="flex justify-between items-end mb-4">
-          <h2
-            class="text-sm font-black uppercase tracking-widest text-slate-400"
-          >
-            Benchmark Snapshot(For reference Only)
-          </h2>
-        </div>
-        <LeaderBoardChart
-          client:load
-          snapshot={sortedSnapshot}
-          unit={metrics.unit}
-        />
-      </div>
+      </header>
     </main>
   </body>
 </Layout>

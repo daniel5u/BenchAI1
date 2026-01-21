@@ -5,8 +5,7 @@
     "description": "A more robust and challenging version of the MMLU benchmark",
     "link": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
     "tags": [
-        "Scientific",
-        "LLM"
+        "Knowledge"
     ],
     "lastUpdated": "2026-01-13",
     "metrics": {

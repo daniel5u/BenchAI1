@@ -5,8 +5,7 @@
     "description": "Artificial Analysis Intelligence Index v4.0 incorporates 10 evaluations: GDPval-AA, 𝜏²-Bench Telecom, Terminal-Bench Hard, SciCode, AA-LCR, AA-Omniscience, IFBench, Humanity's Last Exam, GPQA Diamond, CritPt",
     "link": "https://artificialanalysis.ai/#artificial-analysis-intelligence-index",
     "tags": [
-        "General",
-        "LLM"
+        "Knowledge"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

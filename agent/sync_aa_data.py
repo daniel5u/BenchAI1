@@ -245,7 +245,7 @@ def sync_llm_data():
         new_model_data = {
                 "name": model_name,
                 "publisher": publisher_slug,
-                "release_date": model.get("release_date", ""),
+                "releaseDate": model.get("releaseDate", ""),
                 "params": str(existing_model.get("params", "")),
                 "license": existing_model.get("license",""),
                 "website": existing_model.get("website",""),
@@ -306,7 +306,7 @@ def sync_llm_data():
                 "trending": existing_trending,
                 "snapshot": sorted(
                     snapshot,
-                    key=lambda x:x["score"],
+                    key=lambda x: (x["score"], x["modelRef"]),
                     reverse=meta["metrics"].get("isBetterHigher", True)
                     )
                 }

@@ -5,9 +5,8 @@
     "description": "A scientist-curated coding benchmark featuring 338 sub-tasks derived from 80 genuine laboratory problems across 16 scientific disciplines",
     "link": "https://scicode-bench.github.io/",
     "tags": [
-        "Reasoning",
-        "Knowledge",
-        "LLM"
+        "Coding",
+        "Reasoning"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

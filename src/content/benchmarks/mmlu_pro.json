@@ -5,9 +5,7 @@
     "description": "An enhanced version of MMLU with 12,000 graduate-level questions across 14 subject areas, featuring ten answer options and deeper reasoning requirements",
     "link": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
     "tags": [
-        "Multitask",
-        "General",
-        "LLM"
+        "Knowledge"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

@@ -1,0 +1,69 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layout/layout.astro";
+import ModelFilterableList from "../../components/ModelFilterableList";
+import { getModelStats } from "../../utils/analytics";
+
+// Get all models
+const allModels = await getCollection("models");
+
+// Get the model stat
+const modelDataList = await Promise.all(
+  allModels.map(async (m) => {
+    const stats = await getModelStats(m.id);
+
+    const pubEntry = await getEntry(m.data.publisher);
+
+    return {
+      id: m.id,
+      name: m.data.name,
+      publisher: { name: pubEntry.data.name, logo: pubEntry.data.logo },
+      averageScore: stats.averageScore,
+      releaseDate: m.data.releaseDate,
+      params: m.data.params,
+    };
+  }),
+);
+
+// Get all publishers (Deduplicated by name)
+const uniquePublishersMap = new Map();
+
+modelDataList.forEach((item) => {
+  if (!uniquePublishersMap.has(item.publisher.name)) {
+    uniquePublishersMap.set(item.publisher.name, item.publisher);
+  }
+});
+
+const allPublishers = Array.from(uniquePublishersMap.values()).sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
+---
+
+<Layout title="All Models - BenchAI">
+  <div class="pb-20">
+    <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+      <a
+        href="/"
+        class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs"
+      >
+        ← Back to Dashboard
+      </a>
+    </nav>
+
+    <main class="w-[90%] max-w-7xl mx-auto px-6">
+      <header class="mb-12 text-center">
+        <h1 class="text-5xl font-black text-slate-900 mb-4">Model Hub</h1>
+        <p class="text-xl text-slate-500">Explore and compare models</p>
+      </header>
+
+      <ModelFilterableList
+        client:load
+        models={modelDataList}
+        publishers={allPublishers.map((p) => ({
+          name: p.name,
+          logo: p.logo,
+        }))}
+      />
+    </main>
+  </div>
+</Layout>

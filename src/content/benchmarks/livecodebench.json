@@ -5,8 +5,7 @@
     "description": "LiveCodeBench collects problems from periodic contests on LeetCode, AtCoder, and Codeforces platforms and uses them for constructing a holistic benchmark for evaluating Code LLMs across variety of code-related scenarios continuously over time",
     "link": "https://livecodebench.github.io/",
     "tags": [
-        "Coding",
-        "LLM"
+        "Coding"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

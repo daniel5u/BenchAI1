@@ -5,9 +5,8 @@
     "description": "SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub. Given a codebase and an issue, a language model is tasked with generating a patch that resolves the described problem",
     "link": "https://www.swebench.com/",
     "tags": [
-        "Coding",
         "Agent",
-        "Software Engineer"
+        "Coding"
     ],
     "lastUpdated": "2026-01-12",
     "metrics": {

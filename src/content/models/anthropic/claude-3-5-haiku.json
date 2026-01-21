@@ -1,7 +1,7 @@
 {
     "name": "Claude 3.5 Haiku",
     "publisher": "anthropic",
-    "release_date": "2024-10-22",
+    "releaseDate": "2024-10-22",
     "params": "",
     "license": "",
     "website": "",

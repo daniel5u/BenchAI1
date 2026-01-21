@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layout/layout.astro";
+
+const allPublishers = await getCollection("publishers");
+const allModels = await getCollection("models");
+
+// Compute the model count for each publisher
+const publishersWithStats = allPublishers
+  .map((pub) => {
+    // Get the model from current publisher
+    const modelCount = allModels.filter(
+      (m) => m.data.publisher.id === pub.id,
+    ).length;
+
+    return {
+      ...pub,
+      modelCount,
+    };
+  })
+  .sort((a, b) => {
+    return b.modelCount - a.modelCount;
+  });
+---
+
+<Layout title="AI Publishers & Organizations">
+  <div class="bg-slate-50 min-h-screen pb-20">
+    <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+      <a
+        href="/"
+        class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs"
+      >
+        ← Back to Dashboard
+      </a>
+    </nav>
+
+    <main class="w-[90%] max-w-7xl mx-auto px-6">
+      <header class="mb-12 text-center">
+        <h1 class="text-5xl font-black text-slate-900 mb-4">Publisher Hub</h1>
+        <p class="text-xl text-slate-500">
+          Discover publishers building the future of AI
+        </p>
+      </header>
+
+      <!-- Logo Wall -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-1">
+        {
+          publishersWithStats.map((pub) => (
+            <a
+              href={`/publishers/${pub.id}`}
+              class="group bg-white rounded-2xl p-6 border border-slate-200 hover:border-indigo-400 hover:shadow-lg transition-all flex flex-col items-center text-center"
+            >
+              <div class="w-20 h-20 mb-4 flex items-center justify-center p-2 bg-slate-50 rounded-xl group-hover:bg-white group-hover:scale-110 transition-transform">
+                <img
+                  src={pub.data.logo}
+                  alt={pub.data.name}
+                  class="w-full h-full object-contain filter "
+                />
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 mb-1">
+                {pub.data.name}
+              </h3>
+
+              <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded-full group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                {pub.modelCount} Models
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+  </div>
+</Layout>

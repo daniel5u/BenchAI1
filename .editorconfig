@@ -1,0 +1,10 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4  # 默认所有文件 4 空格
+
+# 针对 astro 和 ts 使用 2 空格
+[*.{astro,ts,tsx,js,jsx,json}]
+indent_size = 2

@@ -1,0 +1,92 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layout/layout.astro";
+import PublisherModelList from "../../components/PublisherModelList";
+import { getModelStats } from "../../utils/analytics";
+
+// Generate the path for all publishers
+export async function getStaticPaths() {
+  const publishers = await getCollection("publishers");
+  return publishers.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+// Get the publisher in current page
+const { entry } = Astro.props;
+const { name, website, logo, color } = entry.data;
+
+// Get all the models from current publisher
+const allModels = await getCollection("models");
+const curModels = allModels.filter((m) => m.data.publisher.id === entry.id);
+
+// Generate the stats for component `PublisherModelList`
+const modelList = await Promise.all(
+  curModels.map(async (m) => {
+    const stats = await getModelStats(m.id);
+
+    return {
+      id: m.id,
+      name: m.data.name,
+      params: m.data.params,
+      releaseDate: m.data.releaseDate,
+      averageScore: stats.averageScore,
+      totalBenchmarks: stats.totalBenchmarks,
+    };
+  }),
+);
+
+modelList.sort((a, b) => b.averageScore - a.averageScore);
+---
+
+<Layout title={`${name} - Publisher Profile`}>
+  <div class="bg-slate-50 min-h-screen pb-20">
+    <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+      <a
+        href="/"
+        class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs"
+      >
+        ← Back to Dashboard
+      </a>
+    </nav>
+
+    <main class="w-[90%] max-w-7xl mx-auto px-6">
+      {/* Publisher info header */}
+      <header
+        class="bg-white rounded-3xl p-10 mb-12 shadow-sm flex flex-col border border-slate-100 md:flex-row gap-8 items-center md:items-start text-center md:text-left"
+      >
+        {/* Publisher Logo */}
+        <div
+          class="w-32 h-32 bg-slate-50 rounded-2xl flex items-center justify-center p-4 border border-slate-100 shrink-0"
+        >
+          <img src={logo} alt={name} class="w-full h-full object-contain" />
+        </div>
+        {/* Text info */}
+        <div class="flex-1">
+          <h1 class="text-5xl font-black text-slate-900 mb-4">{name}</h1>
+
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            {
+              website && (
+                <a
+                  href={website}
+                  target="_blank"
+                  class="btn bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-slate-700 transition shadow-lg shadow-slate-200"
+                >
+                  Official Website ↗
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </header>
+      {/* Model List */}
+      <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-900">Model Collection</h2>
+
+        <PublisherModelList client:load models={modelList} logo={logo} />
+      </section>
+    </main>
+  </div>
+</Layout>

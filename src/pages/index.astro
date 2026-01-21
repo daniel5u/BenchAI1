@@ -1,27 +1,194 @@
 ---
-import { getCollection } from "astro:content";
-import BenchmarkExplorer from "../components/BenchmarkExplorer";
+import { getCollection, getEntry } from "astro:content";
 import Layout from "../layout/layout.astro";
+import { getModelStats } from "../utils/analytics";
 
-// Get all the data
+// Get top 6 benchmarks and sort by trending
 const allBenchmarks = await getCollection("benchmarks");
+const trendingBenchmarks = allBenchmarks
+  .sort(
+    (a, b) =>
+      (b.data.trending?.initialWeight || 0) -
+      (a.data.trending?.initialWeight || 0),
+  )
+  .slice(0, 6);
 
-// Add State Management
-import { useState } from "react";
+// Get top 10 models
+const allModels = await getCollection("models");
+const modelRankings = await Promise.all(
+  allModels.map(async (m) => {
+    const stats = await getModelStats(m.id);
+    const publisher = await getEntry(m.data.publisher);
+    return {
+      id: m.id,
+      name: m.data.name,
+      score: stats.averageScore,
+      publisherLogo: publisher?.data.logo,
+      publisherName: publisher?.data.name,
+      publisherColor: publisher?.data.color,
+    };
+  }),
+);
+
+const topModels = modelRankings.sort((a, b) => b.score - a.score).slice(0, 10);
 ---
 
-<Layout title="BenchAI1 | Bench All In One">
-  <main class="w-[80%] mx-auto px-6 py-20">
-    <header class="text-center mb-20">
-      <h1 class="text-7xl font-black text-slate-900 mb-6 tracking-tighter">
-        Bench<span class="text-orange-650">AI</span>1
-      </h1>
-      <p class="text-slate-500 text-lg max-w-xl mx-auto">
-        The navigator for global AI evaluations. Help you find the best model /
-        evaluation.
-      </p>
-    </header>
+<Layout title="Bench All in One">
+  <div>
+    <!-- Hero Section -->
+    <header class="text-black rounded-b-[3rem] relative overflow-hidden mb-10">
+      <div class="max-w-7xl mx-auto relative z-10 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mt-10 mb-6 tracking-tight">
+          Benchmark <span class="text-orange-500">A</span>ll <span
+            class="text-orange-500">I</span
+          >n One
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+          The open-source hub for AI model evaluations. <br />
+          Find your model across {allBenchmarks.length} benchmarks and {
+            allModels.length
+          } models.
+        </p>
 
-    <BenchmarkExplorer client:load allBenchmarks={allBenchmarks} />
+        <!-- Quick Entry -->
+        <div class="flex justify-center gap-4">
+          <a
+            href="/models"
+            class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition text-lg border border-slate-700"
+          >
+            Explore all Models
+          </a>
+          <a
+            href="/benchmarks"
+            class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition text-lg border border-slate-700"
+          >
+            Explore all Benchmarks
+          </a>
+          <a
+            href="/publishers"
+            class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition text-lg border border-slate-700"
+          >
+            Explore all Publishers
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <hr class="border-t border-slate-200 my-2" />
+
+  <main class="max-w-7xl mx-auto px-6 relative z-20 pb-5">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left column: Top Models -->
+      <div class="lg:col-span-1">
+        <div
+          class="bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100"
+        >
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-black text-slate-900">Best Models</h2>
+            <a
+              href="/models"
+              class="text-xs font-bold text-indigo-600 hover:underline"
+              >View All</a
+            >
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left">
+              <tbody>
+                {
+                  topModels.map((model, index) => (
+                    <tr class="group border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
+                      {/* Rank */}
+                      <td class="p-2 w-10 align-middle">
+                        <div class="font-black text-slate-300 text-center group-hover:text-indigo-500 transition-colors">
+                          {index + 1}
+                        </div>
+                      </td>
+
+                      {/* Logo */}
+                      <td class="p-2 w-12 align-middle">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-slate-50 border border-slate-100">
+                          <img
+                            src={model.publisherLogo}
+                            class="w-full h-full object-contain"
+                          />
+                        </div>
+                      </td>
+
+                      {/* Name + Score Bar */}
+                      <td class="p-2 align-middle">
+                        <a href={`/models/${model.id}`} class="block w-full">
+                          {/* Name */}
+                          <div class="font-bold text-xs text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors">
+                            {model.name}
+                          </div>
+
+                          {/* Score */}
+                          <div class="w-full bg-slate-100 rounded overflow-hidden">
+                            <div
+                              class="font-mono font-bold text-slate-200 text-center rounded text-[10px] leading-relaxed transition-all duration-500 whitespace-nowrap"
+                              style={{
+                                backgroundColor: model.publisherColor,
+                                width: `${Math.max(model.score, 15)}%`,
+                              }}
+                            >
+                              {model.score}
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Benchmarks -->
+      <div class="lg:col-span-2">
+        <div class="flex justify-between items-center mb-6 px-2">
+          <h2 class="text-xl font-black text-slate-900">Trending Benchmarks</h2>
+          <a
+            href="/benchmarks"
+            class="text-xs font-bold text-indigo-600 hover:underline"
+            >View All</a
+          >
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {
+            trendingBenchmarks.map((bench) => (
+              <a
+                href={`/benchmarks/${bench.id}`}
+                class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-indigo-400 transition group h-full flex flex-col"
+              >
+                <div class="flex justify-between items-start mb-3">
+                  <h3 class="font-bold text-lg text-slate-900 group-hover:text-indigo-600 leading-tight">
+                    {bench.data.name}
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-500 line-clamp-2 mb-4 flex-1">
+                  {bench.data.description}
+                </p>
+                <div class="flex gap-2">
+                  {bench.data.tags.slice(0, 2).map((tag) => (
+                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </main>
+
+  <footer class="text-center py-10 text-slate-400 text-sm">
+    <p>© 2026 Benchmark All In One.</p>
+  </footer>
 </Layout>

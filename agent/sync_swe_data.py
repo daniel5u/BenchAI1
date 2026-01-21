@@ -133,7 +133,7 @@ def parse_html(html_content):
         cols = row.find_all('td')
         if not cols: continue
 
-        # Get model name and socre from <td>s
+        # Get model name and score from <td>s
         model = cols[1].get_text(strip=True)
         score = cols[2].get_text(strip=True)
 

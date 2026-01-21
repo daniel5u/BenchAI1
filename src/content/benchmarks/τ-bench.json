@@ -5,8 +5,7 @@
     "description": "Benchmarking AI agents in collaborative real-world scenarios. τ-bench challenges agents to coordinate, guide, and assist users in achieving shared objectives across complex enterprise domains",
     "link": "http://taubench.com/#leaderboard",
     "tags": [
-        "Agent",
-        "Instruction-Following"
+        "Agent"
     ],
     "lastUpdated": "2026-01-13",
     "metrics": {

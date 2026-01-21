@@ -1,0 +1,193 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layout/layout.astro";
+import ModelRadarChart from "../../components/ModelRadarChart";
+import { getModelStats } from "../../utils/analytics";
+
+export async function getStaticPaths() {
+  const models = await getCollection("models");
+  return models.map((model) => ({
+    params: { id: model.id },
+    props: { model },
+  }));
+}
+
+const { model } = Astro.props;
+const { name, params, license, releaseDate } = model.data;
+
+const publisher = await getEntry("publishers", model.data.publisher.id);
+const themeColor = publisher?.data.color || "#6366f1";
+
+const stats = await getModelStats(model.id);
+---
+
+<Layout title={`${name}`}>
+  <div class="min-h-screen pb-20">
+    <!-- Top Navigation -->
+    <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+      <a
+        href="/"
+        class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs"
+      >
+        ← Back to Dashboard
+      </a>
+    </nav>
+
+    <main class="w-[90%] max-w-7xl mx-auto px-6">
+      <!-- Model Card -->
+      <header
+        class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12"
+      >
+        {/* Publisher Logo */}
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+          <img
+            src={publisher?.data.logo}
+            alt={publisher?.data.name}
+            class="w-16 h-16 object-contain"
+          />
+        </div>
+
+        <div>
+          <!-- Model Size -->
+          <div class="flex items-center gap-3 mb-2">
+            <h1 class="text-4xl font-black text-slate-900">{name}</h1>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-bold bg-white border border-slate-200 text-slate-500"
+            >
+              {params || "Unknown Size"}
+            </span>
+          </div>
+
+          <p class="text-slate-500 flex gap-4 font-medium">
+            <span
+              >By <span style={`color: ${themeColor}`}
+                >{publisher?.data.name}</span
+              ></span
+            >
+            {releaseDate && <span>• Released {releaseDate}</span>}
+            {license && <span>• {license}</span>}
+          </p>
+        </div>
+      </header>
+
+      <!-- Analysis part -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- On the left side: the Radar chart -->
+        <div
+          class="lg:col-span-2 bg-white rounded-2xl p-8 shadow-sm border border-slate-100"
+        >
+          <h2 class="text-xl font-bold mb-6 text-slate-800">
+            Capability Radar
+          </h2>
+          <ModelRadarChart
+            client:visible
+            data={stats.radarData}
+            color={themeColor}
+          />
+        </div>
+
+        <!-- On the right side: Core score -->
+        <div class="flex flex-col gap-6">
+          <!-- Average score card -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex-1 flex flex-col justify-center items-center text-center"
+          >
+            <div
+              class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2"
+            >
+              Avg Score
+            </div>
+            <div class="text-6xl font-black">
+              {stats.averageScore}
+            </div>
+            <p class="text-sm text-slate-400 mt-2">Across all benchmarks</p>
+          </div>
+
+          <!-- Participated benchmark count -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex-1 flex flex-col justify-center items-center text-center"
+          >
+            <div
+              class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2"
+            >
+              Participated
+            </div>
+            <div class="text-5xl font-black mb-2">
+              {stats.totalBenchmarks}
+            </div>
+            <div
+              class="text-sm font-bold text-slate-400 uppercase tracking-widest"
+            >
+              Benchmarks
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed score -->
+      <section>
+        <h2 class="text-2xl font-bold mb-6 text-slate-900">
+          Benchmark Performance
+        </h2>
+        <div
+          class="bg-white rounded-2xl border border-slate-200 overflow-hidden"
+        >
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-slate-50 border-b border-slate-200">
+              <tr>
+                <th
+                  class="py-4 px-6 text-xs font-black text-slate-400 uppercase tracking-wider"
+                  >Benchmark</th
+                >
+                <th
+                  class="py-4 px-6 text-xs font-black text-slate-400 uppercase tracking-wider"
+                  >Category</th
+                >
+                <th
+                  class="py-4 px-6 text-xs font-black text-slate-400 uppercase tracking-wider text-right"
+                  >Score</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              {
+                stats.participatedBenchmarks.length > 0 ? (
+                  stats.participatedBenchmarks.map((bench) => (
+                    <tr class="hover:bg-slate-50 transition group">
+                      <td class="py-4 px-6">
+                        <a
+                          href={`/benchmarks/${bench.id}`}
+                          class="font-bold text-slate-700 group-hover:text-indigo-600 transition"
+                        >
+                          {bench.name}
+                        </a>
+                      </td>
+                      <td class="py-4 px-6">
+                        <div class="flex gap-2">
+                          {bench.tags.slice(0, 2).map((tag) => (
+                            <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-md">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </td>
+                      <td class="py-4 px-6 text-right font-mono font-bold text-slate-900">
+                        {bench.score}
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colspan="3" class="py-8 text-center text-slate-400">
+                      Not enough information about this model
+                    </td>
+                  </tr>
+                )
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>

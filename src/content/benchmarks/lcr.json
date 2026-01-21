@@ -5,8 +5,7 @@
     "description": "A challenging benchmark measuring language models' ability to extract, reason about, and synthesize information from long-form documents ranging from 10k to 100k tokens (measured using the cl100k_base tokenizer)",
     "link": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
     "tags": [
-        "Long-Context",
-        "Reasoning"
+        "Long-Context"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

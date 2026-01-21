@@ -5,8 +5,7 @@
     "description": "A dual-control conversational AI benchmark simulating technical support scenarios where both agent and user must coordinate actions to resolve telecom service issues",
     "link": "https://taubench.com/#leaderboard",
     "tags": [
-        "Reasoning",
-        "Knowledge"
+        "Agent"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

@@ -5,8 +5,7 @@
     "description": "Represents the average of coding benchmarks in the Artificial Analysis Intelligence Index (Terminal-Bench Hard, SciCode)",
     "link": "https://artificialanalysis.ai/#artificial-analysis-coding-index",
     "tags": [
-        "Coding",
-        "LLM"
+        "Coding"
     ],
     "lastUpdated": "2026-01-14",
     "metrics": {

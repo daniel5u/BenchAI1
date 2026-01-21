@@ -1,4 +1,4 @@
-import { defineCollection } from "astro:content";
+import { defineCollection, reference } from "astro:content";
 import { glob } from 'astro/loaders';
 import { z } from "astro/zod";
 
@@ -17,7 +17,7 @@ const benchmarks = defineCollection({
       isBetterHigher: z.boolean().default(true),
     }),
     snapshot: z.array(z.object({
-      modelRef: z.string(),
+      modelRef: reference('models'),
       score: z.number(),
     })),
     trending: z.object({
@@ -33,11 +33,10 @@ const models = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/models" }),
   schema: z.object({
     name: z.string(),
-    publisher: z.string(),
+    publisher: reference('publishers'),
     releaseDate: z.string().optional(),
     params: z.string().optional(),
     license: z.string().optional(),
-    website: z.string().optional(),
     discussionId: z.string().optional()
   })
 });
@@ -52,8 +51,13 @@ const publishers = defineCollection({
   })
 });
 
+const benchmarkDocs = defineCollection({
+    loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/benchmark-docs" }),
+})
+
 export const collections = {
   'benchmarks': benchmarks,
   'models': models,
   'publishers': publishers,
+  'benchmark-docs': benchmarkDocs,
 }
