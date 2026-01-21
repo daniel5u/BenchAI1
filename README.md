@@ -7,7 +7,7 @@
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000.svg)](https://vercel.com)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-[**🌐 Live Demo**](https://bench-ai-1-apzt.vercel.app/) | [**🐛 Report Bug**](https://github.com/daniel5u/BenchAI1/issues) | [**✨ Request Feature**](https://github.com/daniel5u/BenchAI1/discussions)
+[**Live Demo**](https://bench-ai-1-apzt.vercel.app/) | [**Report Bug**](https://github.com/daniel5u/BenchAI1/issues) | [**Request Feature**](https://github.com/daniel5u/BenchAI1/discussions)
 
 ---
 
@@ -83,7 +83,7 @@ uv run [specific_script].py
 Contributions are welcomed! You can upload your own benchmark / your own model with scores / your improvement on the structure of the project, whether frontend or data structure
 
 - **Upload your own benchmark**: ***Any benchmark should contain no less than 5 models to make it valid***. Simply write the corresponding `/src/content/benchamrks/your_benchmark.json` to include the benchamrk's name, matrix, data and so on, and the `/src/content/benchmark-docs/your_doc.mdx(or .md)` to describe any detailed information about your benchamrk.
-- **Make sure the model reference is valid**: All models are stored in `/src/content/models` with respect to their publish (for example, gpt-4 will be stored as `/src/content/models/openai/gpt-4.json`), if there are any problem with model (incorrect name, params and so on), open an issue to correct the information. 
+- **Make sure the model reference is valid**: All models are stored in `/src/content/models` with respect to their publisher (for example, gpt-4 will be stored as `/src/content/models/openai/gpt-4.json`), if there are any problem with model (incorrect name, params and so on), open an issue to correct the information. 
 - **Project improvement**: I am a total rookie to dev, so if you have any idea about *improving UI&UX about the pages*, *adding more function to the project*, *any other suggestions*, feel free to open an issue / pull request / discussion.
 
 ## License
