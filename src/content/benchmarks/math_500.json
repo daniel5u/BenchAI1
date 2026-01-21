@@ -8,7 +8,7 @@
         "Reasoning",
         "Math"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-21",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -257,11 +257,11 @@
             "score": 93.0
         },
         {
-            "modelRef": "google/gemini-2-5-flash-lite",
+            "modelRef": "google/gemini-2-5-flash-04-2025",
             "score": 92.6
         },
         {
-            "modelRef": "google/gemini-2-5-flash-04-2025",
+            "modelRef": "google/gemini-2-5-flash-lite",
             "score": 92.6
         },
         {
@@ -569,11 +569,11 @@
             "score": 71.4
         },
         {
-            "modelRef": "mistral/devstral-medium",
+            "modelRef": "mistral/mistral-small-3-1",
             "score": 70.7
         },
         {
-            "modelRef": "mistral/mistral-small-3-1",
+            "modelRef": "mistral/devstral-medium",
             "score": 70.7
         },
         {

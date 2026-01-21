@@ -9,7 +9,7 @@
         "General",
         "LLM"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-21",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -138,19 +138,19 @@
             "score": 85.3
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
-            "score": 85.1
-        },
-        {
             "modelRef": "deepseek/deepseek-v3-1-reasoning",
             "score": 85.1
         },
         {
-            "modelRef": "xai/grok-4-fast-reasoning",
-            "score": 85.0
+            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
+            "score": 85.1
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-reasoning-0925",
+            "score": 85.0
+        },
+        {
+            "modelRef": "xai/grok-4-fast-reasoning",
             "score": 85.0
         },
         {
@@ -214,16 +214,12 @@
             "score": 83.7
         },
         {
-            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
-            "score": 83.7
-        },
-        {
             "modelRef": "anthropic/claude-4-sonnet",
             "score": 83.7
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus",
-            "score": 83.6
+            "modelRef": "anthropic/claude-3-7-sonnet-thinking",
+            "score": 83.7
         },
         {
             "modelRef": "alibaba/qwen3-vl-235b-a22b-reasoning",
@@ -231,6 +227,10 @@
         },
         {
             "modelRef": "google/gemini-2-5-flash-preview-09-2025",
+            "score": 83.6
+        },
+        {
+            "modelRef": "deepseek/deepseek-v3-1-terminus",
             "score": 83.6
         },
         {
@@ -290,11 +290,11 @@
             "score": 82.5
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-next-80b-a3b-reasoning",
             "score": 82.4
         },
         {
-            "modelRef": "alibaba/qwen3-next-80b-a3b-reasoning",
+            "modelRef": "alibaba/qwen3-max-thinking",
             "score": 82.4
         },
         {
@@ -322,11 +322,11 @@
             "score": 82.0
         },
         {
-            "modelRef": "minimax/minimax-m2",
+            "modelRef": "openai/gpt-5-chatgpt",
             "score": 82.0
         },
         {
-            "modelRef": "openai/gpt-5-chatgpt",
+            "modelRef": "minimax/minimax-m2",
             "score": 82.0
         },
         {
@@ -428,6 +428,10 @@
         {
             "modelRef": "alibaba/qwen3-vl-30b-a3b-reasoning",
             "score": 80.7
+        },
+        {
+            "modelRef": "inclusionai/ring-1t",
+            "score": 80.6
         },
         {
             "modelRef": "openai/gpt-5-minimal",
@@ -918,7 +922,7 @@
             "score": 69.4
         },
         {
-            "modelRef": "mistral/ministral-14b",
+            "modelRef": "mistral/ministral-3-14b",
             "score": 69.3
         },
         {
@@ -1030,7 +1034,7 @@
             "score": 64.3
         },
         {
-            "modelRef": "mistral/ministral-8b",
+            "modelRef": "mistral/ministral-3-8b",
             "score": 64.2
         },
         {
@@ -1162,7 +1166,7 @@
             "score": 52.9
         },
         {
-            "modelRef": "mistral/ministral-3b",
+            "modelRef": "mistral/ministral-3-3b",
             "score": 52.4
         },
         {
@@ -1274,11 +1278,11 @@
             "score": 41.1
         },
         {
-            "modelRef": "meta/llama-2-chat-13b",
+            "modelRef": "meta/llama-2-chat-70b",
             "score": 40.6
         },
         {
-            "modelRef": "meta/llama-2-chat-70b",
+            "modelRef": "meta/llama-2-chat-13b",
             "score": 40.6
         },
         {

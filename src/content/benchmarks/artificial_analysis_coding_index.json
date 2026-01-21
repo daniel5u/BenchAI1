@@ -8,7 +8,7 @@
         "Coding",
         "LLM"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-21",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -221,11 +221,11 @@
             "score": 28.4
         },
         {
-            "modelRef": "minimax/minimax-m2",
+            "modelRef": "baidu/ernie-5-0-thinking-preview",
             "score": 28.1
         },
         {
-            "modelRef": "baidu/ernie-5-0-thinking-preview",
+            "modelRef": "minimax/minimax-m2",
             "score": 28.1
         },
         {
@@ -521,6 +521,10 @@
             "score": 17.0
         },
         {
+            "modelRef": "inclusionai/ring-1t",
+            "score": 16.5
+        },
+        {
             "modelRef": "bytedance-seed/seed-oss-36b-instruct",
             "score": 16.4
         },
@@ -534,6 +538,10 @@
         },
         {
             "modelRef": "alibaba/qwen3-vl-235b-a22b-instruct",
+            "score": 16.2
+        },
+        {
+            "modelRef": "openai/gpt-4o-2024-08-06",
             "score": 16.2
         },
         {
@@ -553,11 +561,11 @@
             "score": 15.6
         },
         {
-            "modelRef": "mistral/devstral-medium",
+            "modelRef": "nous-research/hermes-4-llama-3-1-405b-reasoning",
             "score": 15.5
         },
         {
-            "modelRef": "nous-research/hermes-4-llama-3-1-405b-reasoning",
+            "modelRef": "mistral/devstral-medium",
             "score": 15.5
         },
         {
@@ -657,19 +665,19 @@
             "score": 13.7
         },
         {
-            "modelRef": "alibaba/qwen3-32b-instruct-reasoning",
-            "score": 13.7
-        },
-        {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct",
             "score": 13.7
         },
         {
-            "modelRef": "aws/nova-2-0-omni",
-            "score": 13.6
+            "modelRef": "alibaba/qwen3-32b-instruct-reasoning",
+            "score": 13.7
         },
         {
             "modelRef": "aws/nova-premier",
+            "score": 13.6
+        },
+        {
+            "modelRef": "aws/nova-2-0-omni",
             "score": 13.6
         },
         {
@@ -805,7 +813,7 @@
             "score": 10.8
         },
         {
-            "modelRef": "mistral/ministral-14b",
+            "modelRef": "mistral/ministral-3-14b",
             "score": 10.7
         },
         {
@@ -853,7 +861,7 @@
             "score": 10.3
         },
         {
-            "modelRef": "mistral/ministral-8b",
+            "modelRef": "mistral/ministral-3-8b",
             "score": 9.8
         },
         {
@@ -977,6 +985,10 @@
             "score": 5.9
         },
         {
+            "modelRef": "ai2/olmo-3-1-32b-instruct",
+            "score": 5.6
+        },
+        {
             "modelRef": "aws/nova-lite",
             "score": 5.1
         },
@@ -993,7 +1005,7 @@
             "score": 4.9
         },
         {
-            "modelRef": "mistral/ministral-3b",
+            "modelRef": "mistral/ministral-3-3b",
             "score": 4.8
         },
         {
@@ -1003,6 +1015,10 @@
         {
             "modelRef": "alibaba/qwen3-vl-4b-instruct",
             "score": 4.5
+        },
+        {
+            "modelRef": "ai2/molmo2-8b",
+            "score": 4.4
         },
         {
             "modelRef": "meta/llama-3-2-instruct-11b-vision",
@@ -1103,6 +1119,10 @@
         {
             "modelRef": "alibaba/qwen3-0-6b-instruct-reasoning",
             "score": 0.9
+        },
+        {
+            "modelRef": "liquidai/lfm2-5-1-2b-instruct",
+            "score": 0.8
         },
         {
             "modelRef": "liquidai/lfm2-1-2b",

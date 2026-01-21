@@ -9,7 +9,7 @@
         "Knowledge",
         "LLM"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-21",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -70,11 +70,11 @@
             "score": 44.7
         },
         {
-            "modelRef": "xai/grok-4-fast-reasoning",
+            "modelRef": "xai/grok-4-1-fast-reasoning",
             "score": 44.2
         },
         {
-            "modelRef": "xai/grok-4-1-fast-reasoning",
+            "modelRef": "xai/grok-4-fast-reasoning",
             "score": 44.2
         },
         {
@@ -82,11 +82,11 @@
             "score": 44.0
         },
         {
-            "modelRef": "openai/gpt-5-1",
+            "modelRef": "anthropic/claude-4-5-haiku-reasoning",
             "score": 43.3
         },
         {
-            "modelRef": "anthropic/claude-4-5-haiku-reasoning",
+            "modelRef": "openai/gpt-5-1",
             "score": 43.3
         },
         {
@@ -142,11 +142,11 @@
             "score": 40.9
         },
         {
-            "modelRef": "anthropic/claude-4-opus",
+            "modelRef": "anthropic/claude-4-1-opus-thinking",
             "score": 40.9
         },
         {
-            "modelRef": "anthropic/claude-4-1-opus-thinking",
+            "modelRef": "anthropic/claude-4-opus",
             "score": 40.9
         },
         {
@@ -158,11 +158,11 @@
             "score": 40.7
         },
         {
-            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
+            "modelRef": "xai/grok-3-mini-reasoning",
             "score": 40.6
         },
         {
-            "modelRef": "xai/grok-3-mini-reasoning",
+            "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
             "score": 40.6
         },
         {
@@ -344,6 +344,10 @@
         {
             "modelRef": "xai/grok-3",
             "score": 36.8
+        },
+        {
+            "modelRef": "inclusionai/ring-1t",
+            "score": 36.7
         },
         {
             "modelRef": "deepseek/deepseek-v3-1",
@@ -546,6 +550,10 @@
             "score": 33.1
         },
         {
+            "modelRef": "openai/gpt-4o-2024-08-06",
+            "score": 33.1
+        },
+        {
             "modelRef": "mistral/mistral-medium-3",
             "score": 33.1
         },
@@ -554,11 +562,11 @@
             "score": 33.1
         },
         {
-            "modelRef": "xai/grok-4-fast",
+            "modelRef": "google/gemini-2-0-flash-thinking-exp-0121",
             "score": 32.9
         },
         {
-            "modelRef": "google/gemini-2-0-flash-thinking-exp-0121",
+            "modelRef": "xai/grok-4-fast",
             "score": 32.9
         },
         {
@@ -758,11 +766,11 @@
             "score": 28.0
         },
         {
-            "modelRef": "aws/nova-2-0-omni",
+            "modelRef": "aws/nova-premier",
             "score": 27.9
         },
         {
-            "modelRef": "aws/nova-premier",
+            "modelRef": "aws/nova-2-0-omni",
             "score": 27.9
         },
         {
@@ -918,7 +926,7 @@
             "score": 23.8
         },
         {
-            "modelRef": "mistral/ministral-14b",
+            "modelRef": "mistral/ministral-3-14b",
             "score": 23.6
         },
         {
@@ -1018,7 +1026,7 @@
             "score": 20.9
         },
         {
-            "modelRef": "mistral/ministral-8b",
+            "modelRef": "mistral/ministral-3-8b",
             "score": 20.8
         },
         {
@@ -1118,6 +1126,10 @@
             "score": 16.8
         },
         {
+            "modelRef": "ai2/olmo-3-1-32b-instruct",
+            "score": 16.7
+        },
+        {
             "modelRef": "alibaba/qwen3-4b-instruct",
             "score": 16.7
         },
@@ -1142,7 +1154,7 @@
             "score": 14.8
         },
         {
-            "modelRef": "mistral/ministral-3b",
+            "modelRef": "mistral/ministral-3-3b",
             "score": 14.4
         },
         {
@@ -1164,6 +1176,10 @@
         {
             "modelRef": "mistral/mistral-small-2402",
             "score": 13.4
+        },
+        {
+            "modelRef": "ai2/molmo2-8b",
+            "score": 13.3
         },
         {
             "modelRef": "meta/llama-3-1-instruct-8b",
@@ -1356,6 +1372,10 @@
         {
             "modelRef": "mistral/mistral-7b-instruct",
             "score": 2.4
+        },
+        {
+            "modelRef": "liquidai/lfm2-5-1-2b-instruct",
+            "score": 2.3
         },
         {
             "modelRef": "ibm/granite-4-0-h-350m",
