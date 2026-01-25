@@ -1,10 +1,11 @@
 import json
 import os
 import re
-import requests
 import sys
 from datetime import datetime
 from pathlib import Path
+
+import requests
 from dotenv import load_dotenv
 
 CURRENT_SCRIPT_PATH = Path(__file__).resolve()
@@ -19,9 +20,10 @@ PUB_DIR = PROJECT_ROOT / "src" / "content" / "publishers"
 
 AA_LLM_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
 AA_API_KEY = os.environ.get("ARTIFICIAL_ANALYSIS_API_KEY")
-HEADERS = { "x-api-key": AA_API_KEY,
-           "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-           }
+HEADERS = {
+    "x-api-key": AA_API_KEY,
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+}
 
 BENCHMARK_METADATA = {
     "artificial_analysis_intelligence_index": {
@@ -33,7 +35,7 @@ BENCHMARK_METADATA = {
         "tags": ["General", "LLM"],
         "metrics": {"unit": "Index", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/#artificial-analysis-intelligence-index", 
+        "AALink": "https://artificialanalysis.ai/#artificial-analysis-intelligence-index",
     },
     "artificial_analysis_coding_index": {
         "name": "Artificial Analysis Coding Index",
@@ -44,7 +46,7 @@ BENCHMARK_METADATA = {
         "tags": ["Coding", "LLM"],
         "metrics": {"unit": "Index", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/#artificial-analysis-coding-index"
+        "AALink": "https://artificialanalysis.ai/#artificial-analysis-coding-index",
     },
     "mmlu_pro": {
         "name": "MMLU-Pro",
@@ -55,7 +57,7 @@ BENCHMARK_METADATA = {
         "tags": ["Multitask", "General", "LLM"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/mmlu-pro"
+        "AALink": "https://artificialanalysis.ai/evaluations/mmlu-pro",
     },
     "gpqa": {
         "name": "GPQA Diamond",
@@ -85,10 +87,10 @@ BENCHMARK_METADATA = {
         "publisher": "UC Berkeley & MIT & Cornell University",
         "description": "LiveCodeBench collects problems from periodic contests on LeetCode, AtCoder, and Codeforces platforms and uses them for constructing a holistic benchmark for evaluating Code LLMs across variety of code-related scenarios continuously over time",
         "link": "https://livecodebench.github.io/",
-        "tags": ["Coding","LLM"],
+        "tags": ["Coding", "LLM"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/livecodebench"
+        "AALink": "https://artificialanalysis.ai/evaluations/livecodebench",
     },
     "scicode": {
         "name": "SciCode",
@@ -97,9 +99,9 @@ BENCHMARK_METADATA = {
         "description": "A scientist-curated coding benchmark featuring 338 sub-tasks derived from 80 genuine laboratory problems across 16 scientific disciplines",
         "link": "https://scicode-bench.github.io/",
         "tags": ["Reasoning", "Knowledge", "LLM"],
-        "metrics": {"unit": "pass@1(%)","isBetterHigher": True},
+        "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/scicode"
+        "AALink": "https://artificialanalysis.ai/evaluations/scicode",
     },
     "math_500": {
         "name": "MATH-500",
@@ -110,7 +112,7 @@ BENCHMARK_METADATA = {
         "tags": ["Reasoning", "Math"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/math-500"
+        "AALink": "https://artificialanalysis.ai/evaluations/math-500",
     },
     "aime_25": {
         "name": "AIME 2025",
@@ -121,7 +123,7 @@ BENCHMARK_METADATA = {
         "tags": ["Olympic", "Math", "Reasoning"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/aime-2025"
+        "AALink": "https://artificialanalysis.ai/evaluations/aime-2025",
     },
     "ifbench": {
         "name": "IFBench",
@@ -132,7 +134,7 @@ BENCHMARK_METADATA = {
         "tags": ["Instruction-Following"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/ifbench"
+        "AALink": "https://artificialanalysis.ai/evaluations/ifbench",
     },
     "lcr": {
         "name": "LCR",
@@ -143,7 +145,7 @@ BENCHMARK_METADATA = {
         "tags": ["Long-Context", "Reasoning"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning"
+        "AALink": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
     },
     "terminalbench_hard": {
         "name": "Terminal-Bench Hard",
@@ -154,7 +156,7 @@ BENCHMARK_METADATA = {
         "tags": ["Agent", "Terminal"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/terminalbench-hard"
+        "AALink": "https://artificialanalysis.ai/evaluations/terminalbench-hard",
     },
     "tau2": {
         "name": "𝜏²-Bench Telecom",
@@ -165,31 +167,34 @@ BENCHMARK_METADATA = {
         "tags": ["Reasoning", "Knowledge"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         "isFromAA": True,
-        "AALink": "https://artificialanalysis.ai/evaluations/tau2-bench"
+        "AALink": "https://artificialanalysis.ai/evaluations/tau2-bench",
     },
-    
-    
 }
 
+
 def slugify(text):
-    if not text: return "unknown"
+    if not text:
+        return "unknown"
     text = text.lower()
-    text = re.sub(r'[^a-z0-9]+', '-', text)
-    return text.strip('-').strip('.')
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return text.strip("-").strip(".")
+
 
 def load_json_safe(path):
     if path.exists():
         try:
-            with open(path, "r", encoding='utf-8') as f:
+            with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except json.JSONDecodeError:
             return {}
     return {}
 
-def save_json(path,data):
+
+def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
+
 
 def sync_llm_data():
     print("Start syncing llm data from Artificial Analysis...")
@@ -202,11 +207,11 @@ def sync_llm_data():
         print("Requesting data from Artificial Analysis...")
         response = requests.get(AA_LLM_URL, headers=HEADERS)
         response.raise_for_status()
-        llmData = response.json().get("data") 
+        llmData = response.json().get("data")
         print(f"Get {len(llmData)} model data")
 
     except Exception as e:
-        print('Network error:',e)
+        print("Network error:", e)
         sys.exit(1)
 
     bench_results = {}
@@ -217,23 +222,23 @@ def sync_llm_data():
         raw_model_slug = model.get("slug")
 
         publisher_name = model.get("model_creator", {}).get("name")
-        raw_publisher_slug = model.get("model_creator",{}).get("slug")
+        raw_publisher_slug = model.get("model_creator", {}).get("slug")
         publisher_slug = slugify(raw_publisher_slug)
 
         model_slug = slugify(raw_model_slug)
 
         model_ref_id = f"{publisher_slug}/{model_slug}"
-        
+
         # Update / Create Publisher information
         pub_file = PUB_DIR / f"{publisher_slug}.json"
         existing_pub = load_json_safe(pub_file)
 
         new_pub_data = {
-                "name": publisher_name,
-                "color": existing_pub.get("color", "#94a3b8"),
-                "logo": existing_pub.get("logo","/logos/unknown.svg"),
-                "website": model.get("model_creator", {}).get("website", "")
-                }
+            "name": publisher_name,
+            "color": existing_pub.get("color", "#94a3b8"),
+            "logo": existing_pub.get("logo", "/logos/unknown.svg"),
+            "website": model.get("model_creator", {}).get("website", ""),
+        }
 
         save_json(pub_file, new_pub_data)
 
@@ -243,35 +248,36 @@ def sync_llm_data():
         existing_model = load_json_safe(model_file)
 
         new_model_data = {
-                "name": model_name,
-                "publisher": publisher_slug,
-                "releaseDate": model.get("releaseDate", ""),
-                "params": str(existing_model.get("params", "")),
-                "license": existing_model.get("license",""),
-                "website": existing_model.get("website",""),
-                "discussionId": existing_model.get("discussionId","")
-                }
+            "name": model_name,
+            "publisher": publisher_slug,
+            "releaseDate": model.get("release_date", ""),
+            "params": str(existing_model.get("params", "")),
+            "license": existing_model.get("license", ""),
+            "website": existing_model.get("website", ""),
+            "discussionId": existing_model.get("discussionId", ""),
+        }
 
         save_json(model_file, new_model_data)
 
         # Update / Create Benchmark information
         eval = model.get("evaluations", {})
         for bench_id, score in eval.items():
-            if score is None: continue
-            if bench_id == "aime": continue
+            if score is None:
+                continue
+            if bench_id == "aime":
+                continue
 
             if bench_id not in bench_results:
                 bench_results[bench_id] = []
 
-            bench_results[bench_id].append({
-                "modelRef": model_ref_id,
-                "raw_score": float(score)
-                })
+            bench_results[bench_id].append(
+                {"modelRef": model_ref_id, "raw_score": float(score)}
+            )
 
     print("Updating benchmarks...")
     for bench_id, snapshot in bench_results.items():
         meta = BENCHMARK_METADATA.get(bench_id)
-        
+
         max_score_in_bench = max(item["raw_score"] for item in snapshot)
         should_multiply = max_score_in_bench <= 1.0
 
@@ -290,40 +296,45 @@ def sync_llm_data():
 
         bench_file = BENCH_DIR / f"{bench_id}.json"
         existing_bench_data = load_json_safe(bench_file)
-        existing_trending = existing_bench_data.get("trending",{"views":0,"initialWeight":1000})
+        existing_trending = existing_bench_data.get(
+            "trending", {"views": 0, "initialWeight": 1000}
+        )
 
         output_data = {
-                "name": meta["name"],
-                "fullName": meta.get("fullName"),
-                "publisher": meta.get("publisher"),
-                "description": meta["description"],
-                "link": meta["link"],
-                "tags": meta["tags"],
-                "lastUpdated": today_str,
-                "metrics": meta["metrics"],
-                "isFromAA": meta.get("isFromAA", False),
-                "AALink": meta.get("AALink"),
-                "trending": existing_trending,
-                "snapshot": sorted(
-                    snapshot,
-                    key=lambda x: (x["score"], x["modelRef"]),
-                    reverse=meta["metrics"].get("isBetterHigher", True)
-                    )
-                }
+            "name": meta["name"],
+            "fullName": meta.get("fullName"),
+            "publisher": meta.get("publisher"),
+            "description": meta["description"],
+            "link": meta["link"],
+            "tags": meta["tags"],
+            "lastUpdated": today_str,
+            "metrics": meta["metrics"],
+            "isFromAA": meta.get("isFromAA", False),
+            "AALink": meta.get("AALink"),
+            "trending": existing_trending,
+            "snapshot": sorted(
+                snapshot,
+                key=lambda x: (x["score"], x["modelRef"]),
+                reverse=meta["metrics"].get("isBetterHigher", True),
+            ),
+        }
 
         def get_core_content(data):
             cp = data.copy()
 
-            return cp.get("snapshot",None)
+            return cp.get("snapshot", None)
 
         if get_core_content(output_data) == get_core_content(existing_bench_data):
-            output_data["lastUpdated"] = existing_bench_data.get("lastUpdated", today_str)
+            output_data["lastUpdated"] = existing_bench_data.get(
+                "lastUpdated", today_str
+            )
         else:
             print(f"Update occurs for {bench_id}")
 
         save_json(bench_file, output_data)
 
     print("Sync complete")
+
 
 if __name__ == "__main__":
     sync_llm_data()
