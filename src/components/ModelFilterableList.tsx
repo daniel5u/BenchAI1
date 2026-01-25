@@ -21,26 +21,33 @@ interface Props {
 const ITEMS_PER_PAGE = 18;
 
 export default function ModelFilterableList({ models, publishers }: Props) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPublisher, setSelectedPublisher] = useState('All');
-  const [sortType, setSortType] = useState<'score' | 'date'>('score');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedPublisher, setSelectedPublisher] = useState("All");
+  const [sortType, setSortType] = useState<"score" | "date">("score");
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredModels = useMemo(() => {
     return models
       .filter((model) => {
         // Search term filter
-        const matchSearch = model.name.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchPublisher = selectedPublisher === 'All' || model.publisher.name === selectedPublisher;
+        const matchSearch = model.name
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
+        const matchPublisher =
+          selectedPublisher === "All" ||
+          model.publisher.name === selectedPublisher;
         return matchSearch && matchPublisher;
       })
       .sort((a, b) => {
-        if (sortType === 'score') {
+        if (sortType === "score") {
           return b.averageScore - a.averageScore;
         } else {
           if (!a.releaseDate) return 1;
           if (!b.releaseDate) return -1;
-          return new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime();
+          return (
+            new Date(b.releaseDate).getTime() -
+            new Date(a.releaseDate).getTime()
+          );
         }
       });
   }, [models, searchTerm, selectedPublisher, sortType]);
@@ -52,11 +59,16 @@ export default function ModelFilterableList({ models, publishers }: Props) {
 
   const totalPages = Math.ceil(filteredModels.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentModels = filteredModels.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentModels = filteredModels.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE,
+  );
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    document.getElementById('model-list-top')?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById("model-list-top")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -65,7 +77,6 @@ export default function ModelFilterableList({ models, publishers }: Props) {
       <div id="model-list-top"></div>
       {/** Control Tab */}
       <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-2xl border border-slate-100 shadow-sm mb-8">
-
         {/* 1. Search Input Section */}
         <div className="relative w-full md:max-w-md">
           <svg
@@ -76,7 +87,11 @@ export default function ModelFilterableList({ models, publishers }: Props) {
             stroke="currentColor"
             strokeWidth={2}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
           </svg>
 
           <input
@@ -89,7 +104,6 @@ export default function ModelFilterableList({ models, publishers }: Props) {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
-
           {/* 2. Publisher Selector */}
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest whitespace-nowrap hidden lg:block">
@@ -100,9 +114,11 @@ export default function ModelFilterableList({ models, publishers }: Props) {
               value={selectedPublisher}
               onChange={(e) => setSelectedPublisher(e.target.value)}
             >
-              <option value='All'>All publishers</option>
-              {publishers.map(p => (
-                <option key={p.name} value={p.name}>{p.name}</option>
+              <option value="All">All publishers</option>
+              {publishers.map((p) => (
+                <option key={p.name} value={p.name}>
+                  {p.name}
+                </option>
               ))}
             </select>
           </div>
@@ -122,6 +138,22 @@ export default function ModelFilterableList({ models, publishers }: Props) {
             </select>
           </div>
 
+          {/* 4. Compare Button */}
+          <div className="flex">
+            <a
+              href="/compare"
+              className="
+                inline-flex items-center justify-center 
+                px-4 py-2 
+                bg-slate-800 hover:bg-slate-700 
+                text-white text-xs font-bold 
+                rounded-lg transition-colors duration-200
+                whitespace-nowrap
+              "
+            >
+              Compare Models
+            </a>
+          </div>
         </div>
       </div>
 
@@ -155,7 +187,6 @@ export default function ModelFilterableList({ models, publishers }: Props) {
             </div>
           </a>
         ))}
-
       </div>
       {filteredModels.length === 0 && (
         <div className="col-span-full text-center py-20 text-slate-400">
@@ -166,7 +197,6 @@ export default function ModelFilterableList({ models, publishers }: Props) {
       {/** Pagination UI */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-2">
-
           {/** Previous Button */}
           <button
             onClick={() => handlePageChange(currentPage - 1)}
@@ -182,7 +212,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
               <button
                 key={page}
                 onClick={() => handlePageChange(page)}
-                className={`w-10 h-10 rounded-lg font-bold flex items-center justify-center transition-colors ${currentPage === page ? 'bg-slate-600 text-white' : 'text-slate-600 hover:bg-slate-300'}`}
+                className={`w-10 h-10 rounded-lg font-bold flex items-center justify-center transition-colors ${currentPage === page ? "bg-slate-600 text-white" : "text-slate-600 hover:bg-slate-300"}`}
               >
                 {page}
               </button>
@@ -193,13 +223,13 @@ export default function ModelFilterableList({ models, publishers }: Props) {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-300 disabled:opacity-50 disabled:cursor-not-allowed font-bold">
+            className="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-300 disabled:opacity-50 disabled:cursor-not-allowed font-bold"
+          >
             Next
           </button>
         </div>
       )}
-
-
     </div>
   );
 }
+

@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { model } = Astro.props;
 const { name, params, license, releaseDate } = model.data;
 
-const publisher = await getEntry("publishers", model.data.publisher.id);
+const publisher = await getEntry(model.data.publisher);
 const themeColor = publisher?.data.color || "#6366f1";
 
 const stats = await getModelStats(model.id);

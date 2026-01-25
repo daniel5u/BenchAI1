@@ -1,0 +1,61 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../layout/layout.astro";
+import ModelComparator from "../components/ModelComparator";
+import { getModelStats } from "../utils/analytics";
+
+// Get all models
+const allModels = await getCollection("models");
+
+// Calculate data for chart
+const precomputedData = await Promise.all(allModels.map(async (m) => {
+  const stats = await getModelStats(m.id);
+  const publisher = await getEntry(m.data.publisher);
+  
+  return {
+    id: m.id,
+    name: m.data.name,
+    publisherColor: publisher?.data.color,
+    publisherName: publisher?.data.name || "Unknown",
+    radar: stats.radarData, 
+    scores: stats.participatedBenchmarks.reduce((acc, curr) => {
+      acc[curr.id] = curr.score;
+      return acc;
+    }, {} as Record<string, number>)
+  };
+}));
+
+// Get benchamrk meta data
+const allBenchmarks = await getCollection("benchmarks");
+const benchmarkMeta = allBenchmarks.map(b => ({
+  id: b.id,
+  name: b.data.name,
+  category: b.data.tags[0] || "General"
+}));
+---
+
+<Layout title="Compare AI Models">
+  <div class="bg-slate-50 min-h-screen pb-20">
+    <nav class="w-[90%] max-w-7xl mx-auto px-6 py-10">
+      <a href="/" class="text-slate-400 hover:text-slate-600 transition font-bold uppercase tracking-widest text-xs">
+        ← Back to Dashboard
+      </a>
+    </nav>
+
+    <main class="w-[90%] max-w-7xl mx-auto px-6">
+      <header class="mb-10 text-center">
+        <h1 class="text-5xl font-black text-slate-900 mb-4">Model Arena</h1>
+        <p class="text-xl text-slate-500">
+          Compare capabilities across {benchmarkMeta.length} benchmarks.
+        </p>
+      </header>
+
+      <ModelComparator 
+        client:only="react" 
+        allModels={precomputedData} 
+        benchmarkMeta={benchmarkMeta}
+      />
+      
+    </main>
+  </div>
+</Layout>
