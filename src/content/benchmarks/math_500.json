@@ -5,9 +5,10 @@
     "description": "A 500-problem subset from the MATH dataset, featuring competition-level mathematics across six domains including algebra, geometry, and number theory",
     "link": "https://github.com/openai/prm800k",
     "tags": [
-        "Reasoning"
+        "Reasoning",
+        "Math"
     ],
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-25",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -24,11 +25,11 @@
             "score": 99.4
         },
         {
-            "modelRef": "openai/o3",
+            "modelRef": "xai/grok-3-mini-reasoning",
             "score": 99.2
         },
         {
-            "modelRef": "xai/grok-3-mini-reasoning",
+            "modelRef": "openai/o3",
             "score": 99.2
         },
         {
@@ -64,11 +65,11 @@
             "score": 98.4
         },
         {
-            "modelRef": "deepseek/deepseek-r1",
+            "modelRef": "nvidia/llama-nemotron-super-49b-v1-5-reasoning",
             "score": 98.3
         },
         {
-            "modelRef": "nvidia/llama-nemotron-super-49b-v1-5-reasoning",
+            "modelRef": "deepseek/deepseek-r1",
             "score": 98.3
         },
         {
@@ -76,15 +77,15 @@
             "score": 98.2
         },
         {
-            "modelRef": "google/gemini-2-5-flash-reasoning",
-            "score": 98.1
-        },
-        {
             "modelRef": "google/gemini-2-5-flash-reasoning-04-2025",
             "score": 98.1
         },
         {
-            "modelRef": "alibaba/qwen3-235b-a22b-instruct-2507",
+            "modelRef": "google/gemini-2-5-flash-reasoning",
+            "score": 98.1
+        },
+        {
+            "modelRef": "minimax/minimax-m1-80k",
             "score": 98.0
         },
         {
@@ -92,7 +93,7 @@
             "score": 98.0
         },
         {
-            "modelRef": "minimax/minimax-m1-80k",
+            "modelRef": "alibaba/qwen3-235b-a22b-instruct-2507",
             "score": 98.0
         },
         {
@@ -132,11 +133,11 @@
             "score": 96.9
         },
         {
-            "modelRef": "google/gemini-2-5-pro",
+            "modelRef": "upstage/solar-pro-2-reasoning",
             "score": 96.7
         },
         {
-            "modelRef": "upstage/solar-pro-2-reasoning",
+            "modelRef": "google/gemini-2-5-pro",
             "score": 96.7
         },
         {
@@ -204,19 +205,19 @@
             "score": 94.4
         },
         {
-            "modelRef": "alibaba/qwen3-coder-480b-a35b-instruct",
-            "score": 94.2
-        },
-        {
             "modelRef": "deepseek/deepseek-v3-0324",
             "score": 94.2
         },
         {
-            "modelRef": "anthropic/claude-4-opus",
-            "score": 94.1
+            "modelRef": "alibaba/qwen3-coder-480b-a35b-instruct",
+            "score": 94.2
         },
         {
             "modelRef": "deepseek/deepseek-r1-distill-qwen-32b",
+            "score": 94.1
+        },
+        {
+            "modelRef": "anthropic/claude-4-opus",
             "score": 94.1
         },
         {
@@ -236,11 +237,11 @@
             "score": 93.3
         },
         {
-            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
+            "modelRef": "google/gemini-2-5-flash",
             "score": 93.2
         },
         {
-            "modelRef": "google/gemini-2-5-flash",
+            "modelRef": "deepseek/deepseek-r1-qwen3-8b",
             "score": 93.2
         },
         {
@@ -320,19 +321,19 @@
             "score": 89.3
         },
         {
-            "modelRef": "alibaba/qwen3-coder-30b-a3b-instruct",
-            "score": 89.3
-        },
-        {
             "modelRef": "openai/gpt-4o-chatgpt-03-25",
             "score": 89.3
         },
         {
-            "modelRef": "meta/llama-4-maverick",
-            "score": 88.9
+            "modelRef": "alibaba/qwen3-coder-30b-a3b-instruct",
+            "score": 89.3
         },
         {
             "modelRef": "upstage/solar-pro-2",
+            "score": 88.9
+        },
+        {
+            "modelRef": "meta/llama-4-maverick",
             "score": 88.9
         },
         {
@@ -340,11 +341,11 @@
             "score": 88.7
         },
         {
-            "modelRef": "google/gemma-3-27b",
+            "modelRef": "mistral/mistral-small-3-2",
             "score": 88.3
         },
         {
-            "modelRef": "mistral/mistral-small-3-2",
+            "modelRef": "google/gemma-3-27b",
             "score": 88.3
         },
         {
@@ -440,11 +441,11 @@
             "score": 81.0
         },
         {
-            "modelRef": "alibaba/qwen-turbo",
+            "modelRef": "alibaba/qwen2-5-32b-instruct",
             "score": 80.5
         },
         {
-            "modelRef": "alibaba/qwen2-5-32b-instruct",
+            "modelRef": "alibaba/qwen-turbo",
             "score": 80.5
         },
         {
@@ -532,11 +533,11 @@
             "score": 74.3
         },
         {
-            "modelRef": "openai/gpt-4-turbo",
+            "modelRef": "xai/grok-beta",
             "score": 73.7
         },
         {
-            "modelRef": "xai/grok-beta",
+            "modelRef": "openai/gpt-4-turbo",
             "score": 73.7
         },
         {
@@ -560,19 +561,19 @@
             "score": 71.5
         },
         {
-            "modelRef": "mistral/mistral-large-2407",
-            "score": 71.4
-        },
-        {
             "modelRef": "mistral/pixtral-large-2411",
             "score": 71.4
         },
         {
-            "modelRef": "mistral/devstral-medium",
-            "score": 70.7
+            "modelRef": "mistral/mistral-large-2407",
+            "score": 71.4
         },
         {
             "modelRef": "mistral/mistral-small-3-1",
+            "score": 70.7
+        },
+        {
+            "modelRef": "mistral/devstral-medium",
             "score": 70.7
         },
         {
@@ -720,11 +721,11 @@
             "score": 48.3
         },
         {
-            "modelRef": "google/gemini-2-0-flash-thinking-exp-1219",
+            "modelRef": "liquidai/lfm-40b",
             "score": 48.0
         },
         {
-            "modelRef": "liquidai/lfm-40b",
+            "modelRef": "google/gemini-2-0-flash-thinking-exp-1219",
             "score": 48.0
         },
         {
