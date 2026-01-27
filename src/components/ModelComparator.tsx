@@ -26,6 +26,7 @@ interface ModelData {
   publisherColor: string;
   publisherName: string;
   publisherLogo: string;
+  averageScore: number;
   radar: { subject: string; A: number }[];
   scores: Record<string, number>;
 }

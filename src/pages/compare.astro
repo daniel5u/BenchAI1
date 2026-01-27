@@ -8,7 +8,7 @@ import { getModelStats } from "../utils/analytics";
 const allModels = await getCollection("models");
 
 // Calculate data for chart
-const precomputedData = await Promise.all(allModels.map(async (m) => {
+const rawData = await Promise.all(allModels.map(async (m) => {
   const stats = await getModelStats(m.id);
   const publisher = await getEntry(m.data.publisher);
   
@@ -18,6 +18,7 @@ const precomputedData = await Promise.all(allModels.map(async (m) => {
     publisherColor: publisher?.data.color,
     publisherName: publisher?.data.name,
     publisherLogo: publisher?.data.logo,
+    averageScore: stats.averageScore,
     radar: stats.radarData, 
     scores: stats.participatedBenchmarks.reduce((acc, curr) => {
       acc[curr.id] = curr.score;
@@ -25,6 +26,8 @@ const precomputedData = await Promise.all(allModels.map(async (m) => {
     }, {} as Record<string, number>)
   };
 }));
+
+const precomputedData = rawData.sort((a, b) => b.averageScore - a.averageScore);
 
 // Get benchamrk meta data
 const allBenchmarks = await getCollection("benchmarks");
