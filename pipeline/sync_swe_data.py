@@ -1,12 +1,13 @@
-import requests
+import json
 import os
 import re
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
+import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
-import json
 
 SWE_URL = "https://www.swebench.com/index.html"
 HEADERS = { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
@@ -25,7 +26,7 @@ SWE_META = {
         "publisher": "Princeton University & University of Chicago",
         "description": "SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub. Given a codebase and an issue, a language model is tasked with generating a patch that resolves the described problem",
         "link": "https://www.swebench.com/",
-        "tags": ["Coding", "Agent", "Software Engineer"],
+        "tags": ["Coding", "Agent"],
         "metrics": {"unit": "% Resolved", "isBetterHigher": True},
         }
 

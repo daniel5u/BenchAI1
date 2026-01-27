@@ -1,12 +1,13 @@
-import requests
+import json
 import os
 import re
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
+import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
-import json
 
 TAU_URL = "http://taubench.com/#leaderboard"
 HEADERS = { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
@@ -25,7 +26,7 @@ TAU_META = {
         "publisher": "Sierra",
         "description": "Benchmarking AI agents in collaborative real-world scenarios. τ-bench challenges agents to coordinate, guide, and assist users in achieving shared objectives across complex enterprise domains",
         "link": "http://taubench.com/#leaderboard",
-        "tags": ["Agent", "Instruction-Following"],
+        "tags": ["Agent", "Knowledge"],
         "metrics": {"unit": "pass@1(%)", "isBetterHigher": True},
         }
 

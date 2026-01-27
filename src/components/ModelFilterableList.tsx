@@ -232,4 +232,3 @@ export default function ModelFilterableList({ models, publishers }: Props) {
     </div>
   );
 }
-

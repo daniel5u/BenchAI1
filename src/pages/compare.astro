@@ -16,7 +16,8 @@ const precomputedData = await Promise.all(allModels.map(async (m) => {
     id: m.id,
     name: m.data.name,
     publisherColor: publisher?.data.color,
-    publisherName: publisher?.data.name || "Unknown",
+    publisherName: publisher?.data.name,
+    publisherLogo: publisher?.data.logo,
     radar: stats.radarData, 
     scores: stats.participatedBenchmarks.reduce((acc, curr) => {
       acc[curr.id] = curr.score;

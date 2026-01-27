@@ -7,7 +7,6 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
   Tooltip,
-  Legend,
 } from "recharts";
 import {
   X,
@@ -26,6 +25,7 @@ interface ModelData {
   name: string;
   publisherColor: string;
   publisherName: string;
+  publisherLogo: string;
   radar: { subject: string; A: number }[];
   scores: Record<string, number>;
 }
@@ -89,8 +89,14 @@ export default function ModelComparator({ allModels, benchmarkMeta }: Props) {
   const filteredOptions = useMemo(() => {
     return allModels.filter(
       (m) =>
-        m.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        m.publisherName.toLowerCase().includes(searchTerm.toLowerCase()),
+        m.name
+          .toLowerCase()
+          .replace(/\s+/g, "")
+          .includes(searchTerm.toLowerCase()) ||
+        m.publisherName
+          .toLowerCase()
+          .replace(/\s+/g, "")
+          .includes(searchTerm.toLowerCase()),
     );
   }, [searchTerm, allModels]);
 
@@ -167,13 +173,16 @@ export default function ModelComparator({ allModels, benchmarkMeta }: Props) {
                   )}
                 >
                   <div className="min-w-0 flex-1 pr-2">
-                    <div
-                      className={clsx(
-                        "truncate",
-                        isSelected ? "text-indigo-900" : "text-slate-700",
-                      )}
-                    >
-                      {m.name}
+                    <div className="flex items-center gap-2">
+                      <img src={m.publisherLogo} className="w-5 h-5" />
+                      <div
+                        className={clsx(
+                          "truncate",
+                          isSelected ? "text-indigo-900" : "text-slate-700",
+                        )}
+                      >
+                        {m.name}
+                      </div>
                     </div>
                     <div className="text-[10px] text-slate-400 truncate">
                       {m.publisherName}
