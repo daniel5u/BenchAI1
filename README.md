@@ -101,10 +101,11 @@ See the [LICENSE](LICENSE) file for details.
 
 I am constantly improving BenchAI1 to make it the best place for AI evaluation insights.
 
-- [ ] **Comparison Function**: Add the `comparison` function between different models / publishers.
+- [x] **Comparison Function**: Add the `comparison` function between different models / publishers.
+- [ ] **Enhance Model Information**: Add the information of parameter size & openness plus filtering function based on these.
 - [ ] **View Tracking**: The popularity(`view`) of different benchmarks are supposed to be tracked somehow, I am finding the best way, probably buying a NAS and deploy a redis server...
 - [ ] **Community Setup**: Since the project aims to build up a complete community for AI evaluation, I am planning to :
-    - set up a discord channel, where people can share their own benchmark, receive latest update, communicate model capabilities and so on.
+    - [x]set up a discord channel, where people can share their own benchmark, receive latest update, communicate model capabilities and so on.
     - set up subscription service, which sends email to users about the latest update / latest SOTA / latest model (customized by user).
 - [ ] **Internationalization (i18n)**: Support various language for global AI community.
 - [ ] **More Data Source**: Integrate as many data source as possible with auto sync.
