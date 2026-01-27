@@ -5,7 +5,7 @@
     "description": "A benchmark evaluating precise instruction-following generalization on 58 diverse, verifiable out-of-domain constraints that test models' ability to follow specific output requirements",
     "link": "https://github.com/allenai/IFBench",
     "tags": [
-        "Instruction-Following"
+        "Agent"
     ],
     "lastUpdated": "2026-01-27",
     "metrics": {
