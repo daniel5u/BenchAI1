@@ -19,6 +19,7 @@ const modelDataList = await Promise.all(
       name: m.data.name,
       publisher: { name: pubEntry.data.name, logo: pubEntry.data.logo },
       averageScore: stats.averageScore,
+      radarData: stats.radarData,
       releaseDate: m.data.releaseDate,
       params: m.data.params,
     };

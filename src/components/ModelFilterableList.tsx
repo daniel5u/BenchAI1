@@ -1,10 +1,17 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { BENCH_CATEGORIES } from "../consts";
 
+export interface RadarData {
+  subject: string;
+  A: number;
+  Fullmark: number;
+}
 export interface ModelIndexItem {
   id: string;
   name: string;
   publisher: PublisherInfo;
   averageScore: number;
+  radarData: RadarData[];
   releaseDate?: string;
   params?: string;
 }
@@ -23,6 +30,7 @@ const ITEMS_PER_PAGE = 18;
 export default function ModelFilterableList({ models, publishers }: Props) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPublisher, setSelectedPublisher] = useState("All");
+  const [selectedTag, setSelectedTag] = useState("All");
   const [sortType, setSortType] = useState<"score" | "date">("score");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -40,7 +48,14 @@ export default function ModelFilterableList({ models, publishers }: Props) {
       })
       .sort((a, b) => {
         if (sortType === "score") {
-          return b.averageScore - a.averageScore;
+          if (selectedTag === "All") {
+            return b.averageScore - a.averageScore;
+          } else {
+            return (
+              (b.radarData.find((r) => r.subject === selectedTag)?.A ?? 0) -
+              (a.radarData.find((r) => r.subject === selectedTag)?.A ?? 0)
+            );
+          }
         } else {
           if (!a.releaseDate) return 1;
           if (!b.releaseDate) return -1;
@@ -50,7 +65,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
           );
         }
       });
-  }, [models, searchTerm, selectedPublisher, sortType]);
+  }, [models, searchTerm, selectedPublisher, sortType, selectedTag]);
 
   // Back to page 1 when filter condition changes
   useEffect(() => {
@@ -113,6 +128,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
               className="w-full sm:w-auto bg-slate-50 border-none rounded-lg text-xs font-bold text-slate-600 focus:ring-2 focus:ring-indigo-500 py-2.5 pl-3 pr-8 cursor-pointer outline-none"
               value={selectedPublisher}
               onChange={(e) => setSelectedPublisher(e.target.value)}
+              autoComplete="off"
             >
               <option value="All">All publishers</option>
               {publishers.map((p) => (
@@ -132,12 +148,32 @@ export default function ModelFilterableList({ models, publishers }: Props) {
               className="w-full sm:w-auto bg-slate-50 border-none rounded-lg text-xs font-bold text-slate-600 focus:ring-2 focus:ring-indigo-500 py-2.5 pl-3 pr-8 cursor-pointer outline-none"
               value={sortType}
               onChange={(e) => setSortType(e.target.value as "score" | "date")}
+              autoComplete="off"
             >
               <option value="score">Score</option>
               <option value="date">Date</option>
             </select>
           </div>
 
+          {/* 4. Tag Control*/}
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest whitespace-nowrap hidden lg:block">
+              Select Tag
+            </span>
+            <select
+              className="w-full sm:w-auto bg-slate-50 border-none rounded-lg text-xs font-bold text-slate-600 focus:ring-2 focus:ring-indigo-500 py-2.5 pl-3 pr-8 cursor-pointer outline-none"
+              value={selectedTag}
+              onChange={(e) => setSelectedTag(e.target.value)}
+              autoComplete="off"
+            >
+              <option value="All">Overall Score</option>
+              {BENCH_CATEGORIES.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </div>
           {/* 4. Compare Button */}
           <div className="flex">
             <a
@@ -178,7 +214,10 @@ export default function ModelFilterableList({ models, publishers }: Props) {
                 </div>
               </div>
               <div className="bg-indigo-50 text-indigo-700 font-black text-xl px-3 py-2 rounded-lg">
-                {model.averageScore}
+                {selectedTag === "All"
+                  ? model.averageScore
+                  : (model.radarData.find((r) => r.subject === selectedTag)
+                      ?.A ?? 0)}
               </div>
             </div>
             <div className="flex justify-between items-center text-xs font-mono text-slate-400 mt-4 relative z-10">
