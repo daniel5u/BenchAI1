@@ -8,7 +8,7 @@
         "General",
         "LLM"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-27",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -357,15 +357,15 @@
             "score": 26.2
         },
         {
+            "modelRef": "kimi/kimi-k2",
+            "score": 26.2
+        },
+        {
             "modelRef": "alibaba/qwen3-max-preview",
             "score": 26.1
         },
         {
             "modelRef": "openai/o3-mini",
-            "score": 25.9
-        },
-        {
-            "modelRef": "kimi/kimi-k2",
             "score": 25.9
         },
         {
@@ -539,6 +539,10 @@
         {
             "modelRef": "google/gemini-2-5-flash-lite-preview-09-2025-reasoning",
             "score": 21.6
+        },
+        {
+            "modelRef": "zai/glm-4-7-flash-non-reasoning",
+            "score": 21.5
         },
         {
             "modelRef": "mistral/mistral-medium-3-1",
@@ -721,10 +725,6 @@
             "score": 17.4
         },
         {
-            "modelRef": "meta/llama-3-1-instruct-405b",
-            "score": 17.3
-        },
-        {
             "modelRef": "baidu/ernie-4-5-300b-a47b",
             "score": 17.3
         },
@@ -841,10 +841,6 @@
             "score": 15.5
         },
         {
-            "modelRef": "alibaba/qwen3-8b-instruct-reasoning",
-            "score": 15.3
-        },
-        {
             "modelRef": "alibaba/qwen3-30b-a3b-instruct-reasoning",
             "score": 15.3
         },
@@ -949,6 +945,10 @@
             "score": 14.2
         },
         {
+            "modelRef": "meta/llama-3-1-instruct-405b",
+            "score": 14.2
+        },
+        {
             "modelRef": "anthropic/claude-35-sonnet-june-24",
             "score": 14.2
         },
@@ -1045,7 +1045,7 @@
             "score": 13.1
         },
         {
-            "modelRef": "alibaba/qwen3-1-7b-instruct-reasoning",
+            "modelRef": "alibaba/qwen3-8b-instruct-reasoning",
             "score": 13.1
         },
         {
@@ -1438,6 +1438,10 @@
         },
         {
             "modelRef": "liquidai/lfm2-2-6b",
+            "score": 7.9
+        },
+        {
+            "modelRef": "alibaba/qwen3-1-7b-instruct-reasoning",
             "score": 7.9
         },
         {

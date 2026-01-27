@@ -10,7 +10,7 @@
         "Academic",
         "LLM"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-27",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -817,6 +817,10 @@
         {
             "modelRef": "google/gemini-2-5-flash-04-2025",
             "score": 5.0
+        },
+        {
+            "modelRef": "zai/glm-4-7-flash-non-reasoning",
+            "score": 4.9
         },
         {
             "modelRef": "openai/o1-mini",

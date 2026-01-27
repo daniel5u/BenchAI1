@@ -8,7 +8,7 @@
         "Scientific",
         "LLM"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-27",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -1031,6 +1031,10 @@
         {
             "modelRef": "mistral/mistral-small-3-1",
             "score": 45.4
+        },
+        {
+            "modelRef": "zai/glm-4-7-flash-non-reasoning",
+            "score": 45.2
         },
         {
             "modelRef": "alibaba/qwen3-8b-instruct",
