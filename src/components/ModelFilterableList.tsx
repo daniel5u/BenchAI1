@@ -4,7 +4,7 @@ import { BENCH_CATEGORIES } from "../consts";
 export interface RadarData {
   subject: string;
   A: number;
-  Fullmark: number;
+  fullMark: 100;
 }
 export interface ModelIndexItem {
   id: string;
