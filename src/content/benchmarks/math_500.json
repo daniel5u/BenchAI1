@@ -5,8 +5,7 @@
     "description": "A 500-problem subset from the MATH dataset, featuring competition-level mathematics across six domains including algebra, geometry, and number theory",
     "link": "https://github.com/openai/prm800k",
     "tags": [
-        "Reasoning",
-        "Math"
+        "Reasoning"
     ],
     "lastUpdated": "2026-01-25",
     "metrics": {
