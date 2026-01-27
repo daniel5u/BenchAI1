@@ -7,7 +7,7 @@
     "tags": [
         "Instruction-Following"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-27",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -362,6 +362,10 @@
         {
             "modelRef": "xai/grok-3",
             "score": 46.9
+        },
+        {
+            "modelRef": "zai/glm-4-7-flash-non-reasoning",
+            "score": 46.3
         },
         {
             "modelRef": "deepcogito/cogito-v2-1-reasoning",

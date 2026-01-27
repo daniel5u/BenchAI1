@@ -8,7 +8,7 @@
         "Agent",
         "Terminal"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-27",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -719,6 +719,10 @@
         {
             "modelRef": "alibaba/qwen2-5-72b-instruct",
             "score": 4.5
+        },
+        {
+            "modelRef": "zai/glm-4-7-flash-non-reasoning",
+            "score": 3.8
         },
         {
             "modelRef": "openai/gpt-4-1-nano",
