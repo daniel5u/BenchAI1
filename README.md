@@ -1,15 +1,22 @@
 # Bench All In One: An open-source hub for artificial intelligence benchmarks
 
+<div align="center">
+
 > **Community-Driven AI Benchmark Ecosystem.**
 > Track SOTA models, visualize capabilities via Radar Charts, and explore the AI landscape with automated daily updates.
+
+<br />
 
 [![Built with Astro](https://img.shields.io/badge/Built_with-Astro-ff5a1f.svg)](https://astro.build)
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000.svg)](https://vercel.com)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Discord Channel](https://img.shields.io/badge/Discord-Join_Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/y5hgGZjq)
+
+<br/>
 
 [**Live Demo**](https://bench-ai-1-apzt.vercel.app/) | [**Report Bug**](https://github.com/daniel5u/BenchAI1/issues) | [**Request Feature**](https://github.com/daniel5u/BenchAI1/discussions)
 
----
+</div>
 
 ## Introduction
 **BenchAI1 is an open-source hub which collects benchmarks in artificial intelligence. It tries to collect as many benchmarks as possible for everyone to find their best model.**
