@@ -5,9 +5,10 @@
     "description": "Benchmarking AI agents in collaborative real-world scenarios. τ-bench challenges agents to coordinate, guide, and assist users in achieving shared objectives across complex enterprise domains",
     "link": "http://taubench.com/#leaderboard",
     "tags": [
-        "Agent"
+        "Agent",
+        "Knowledge"
     ],
-    "lastUpdated": "2026-01-13",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -26,8 +27,8 @@
             "score": 84.7
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
-            "score": 80.8
+            "modelRef": "None/qwen3-max-thinkingnew",
+            "score": 82.2
         },
         {
             "modelRef": "deepseek/deepseek-v3-2",
