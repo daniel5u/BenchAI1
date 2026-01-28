@@ -7,7 +7,7 @@
     "tags": [
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -248,7 +248,7 @@
             "score": 82.3
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 82.3
         },
         {

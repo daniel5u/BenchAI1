@@ -7,7 +7,7 @@
     "tags": [
         "Coding"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -564,7 +564,7 @@
             "score": 54.1
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 53.5
         },
         {

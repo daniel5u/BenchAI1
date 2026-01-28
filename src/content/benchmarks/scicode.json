@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-27",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -47,6 +47,10 @@
         {
             "modelRef": "anthropic/claude-opus-4-5-thinking",
             "score": 49.5
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5",
+            "score": 49.0
         },
         {
             "modelRef": "anthropic/claude-opus-4-5",
@@ -277,7 +281,7 @@
             "score": 38.7
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 38.7
         },
         {
@@ -567,6 +571,10 @@
         {
             "modelRef": "meta/llama-4-maverick",
             "score": 33.1
+        },
+        {
+            "modelRef": "mbzuai/k2-think-v2",
+            "score": 33.0
         },
         {
             "modelRef": "xai/grok-4-fast",
