@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-27",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -26,6 +26,10 @@
         },
         {
             "modelRef": "zai/glm-4-7",
+            "score": 95.9
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5",
             "score": 95.9
         },
         {
@@ -129,7 +133,7 @@
             "score": 83.9
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 83.6
         },
         {
@@ -662,6 +666,10 @@
         },
         {
             "modelRef": "nvidia/nvidia-nemotron-3-nano-30b-a3b",
+            "score": 25.4
+        },
+        {
+            "modelRef": "mbzuai/k2-think-v2",
             "score": 25.4
         },
         {

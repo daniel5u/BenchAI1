@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-27",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -38,6 +38,10 @@
         {
             "modelRef": "google/gemini-3-pro-low",
             "score": 88.7
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5",
+            "score": 87.9
         },
         {
             "modelRef": "xai/grok-4",
@@ -232,7 +236,7 @@
             "score": 77.7
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 77.6
         },
         {
@@ -409,6 +413,10 @@
         },
         {
             "modelRef": "servicenow/apriel-v1-5-15b-thinker",
+            "score": 71.3
+        },
+        {
+            "modelRef": "mbzuai/k2-think-v2",
             "score": 71.3
         },
         {

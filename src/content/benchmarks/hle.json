@@ -8,7 +8,7 @@
         "Knowledge",
         "Multi-Modal"
     ],
-    "lastUpdated": "2026-01-27",
+    "lastUpdated": "2026-01-28",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -39,6 +39,10 @@
         {
             "modelRef": "kwaikat/kat-coder-pro-v1",
             "score": 33.4
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5",
+            "score": 29.4
         },
         {
             "modelRef": "anthropic/claude-opus-4-5-thinking",
@@ -221,7 +225,7 @@
             "score": 12.0
         },
         {
-            "modelRef": "alibaba/qwen3-max-thinking",
+            "modelRef": "alibaba/qwen3-max-thinking-preview",
             "score": 12.0
         },
         {
@@ -330,6 +334,10 @@
         },
         {
             "modelRef": "mistral/magistral-medium",
+            "score": 9.5
+        },
+        {
+            "modelRef": "mbzuai/k2-think-v2",
             "score": 9.5
         },
         {
