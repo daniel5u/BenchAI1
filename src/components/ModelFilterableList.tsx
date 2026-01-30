@@ -93,7 +93,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
       {/** Control Tab */}
       <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-2xl border border-slate-100 shadow-sm mb-8">
         {/* 1. Search Input Section */}
-        <div className="relative w-full md:max-w-md">
+        <div className="relative w-full md:w-1/5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="absolute top-1/2 -translate-y-1/2 left-3 w-5 h-5 text-slate-400 pointer-events-none"
@@ -115,6 +115,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
             className="w-full pl-10 pr-4 py-3 bg-slate-50 border-none rounded-xl text-sm font-medium text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none transition-all placeholder:text-slate-400"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            autoComplete="off"
           />
         </div>
 
@@ -125,7 +126,7 @@ export default function ModelFilterableList({ models, publishers }: Props) {
               Publisher
             </span>
             <select
-              className="w-full sm:w-auto bg-slate-50 border-none rounded-lg text-xs font-bold text-slate-600 focus:ring-2 focus:ring-indigo-500 py-2.5 pl-3 pr-8 cursor-pointer outline-none"
+              className="bg-slate-50 border-none rounded-lg text-xs font-bold text-slate-600 focus:ring-2 focus:ring-indigo-500 py-2.5 pl-3 pr-8 cursor-pointer outline-none w-full max-w-[150px] truncate"
               value={selectedPublisher}
               onChange={(e) => setSelectedPublisher(e.target.value)}
               autoComplete="off"
