@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -108,6 +108,10 @@
             "score": 40.7
         },
         {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 39.8
+        },
+        {
             "modelRef": "minimax/minimax-m2-1",
             "score": 39.5
         },
@@ -134,6 +138,10 @@
         {
             "modelRef": "openai/gpt-5-1-codex-mini",
             "score": 38.5
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
+            "score": 37.5
         },
         {
             "modelRef": "anthropic/claude-4-5-sonnet",
@@ -846,6 +854,10 @@
         {
             "modelRef": "inclusionai/ling-flash-2-0",
             "score": 15.5
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
+            "score": 15.4
         },
         {
             "modelRef": "alibaba/qwen3-30b-a3b-instruct-reasoning",

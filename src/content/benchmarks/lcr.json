@@ -8,7 +8,7 @@
         "Long-Context",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -117,6 +117,10 @@
             "score": 66.0
         },
         {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 66.0
+        },
+        {
             "modelRef": "anthropic/claude-4-5-sonnet-thinking",
             "score": 65.7
         },
@@ -202,6 +206,10 @@
         },
         {
             "modelRef": "minimax/minimax-m2-1",
+            "score": 59.0
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
             "score": 59.0
         },
         {
@@ -958,6 +966,10 @@
         },
         {
             "modelRef": "upstage/solar-pro-2",
+            "score": 0.0
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
             "score": 0.0
         },
         {

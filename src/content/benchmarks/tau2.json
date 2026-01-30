@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -137,12 +137,20 @@
             "score": 83.6
         },
         {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 83.6
+        },
+        {
             "modelRef": "openai/gpt-5-1-codex",
             "score": 83.0
         },
         {
             "modelRef": "openai/gpt-5-1",
             "score": 81.9
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
+            "score": 81.3
         },
         {
             "modelRef": "openai/o3",
@@ -903,6 +911,10 @@
         {
             "modelRef": "alibaba/qwen3-omni-30b-a3b-instruct",
             "score": 16.4
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
+            "score": 16.1
         },
         {
             "modelRef": "ai21-labs/jamba-reasoning-3b",
