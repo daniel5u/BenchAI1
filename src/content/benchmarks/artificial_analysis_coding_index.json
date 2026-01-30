@@ -7,7 +7,7 @@
     "tags": [
         "Coding"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -200,6 +200,10 @@
             "score": 30.6
         },
         {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 30.5
+        },
+        {
             "modelRef": "aws/nova-2-0-pro-reasoning-medium",
             "score": 30.4
         },
@@ -285,6 +289,10 @@
         },
         {
             "modelRef": "xiaomi/mimo-v2-flash",
+            "score": 25.8
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
             "score": 25.8
         },
         {
@@ -682,6 +690,10 @@
         {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct",
             "score": 14.0
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
+            "score": 13.9
         },
         {
             "modelRef": "mistral/mistral-small-3-1",

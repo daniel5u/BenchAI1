@@ -8,7 +8,7 @@
         "Agent",
         "Coding"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -233,6 +233,10 @@
             "score": 24.2
         },
         {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 24.2
+        },
+        {
             "modelRef": "openai/gpt-oss-120b",
             "score": 23.5
         },
@@ -286,6 +290,10 @@
         },
         {
             "modelRef": "mistral/devstral-2",
+            "score": 18.9
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
             "score": 18.9
         },
         {
@@ -650,6 +658,10 @@
         },
         {
             "modelRef": "zai/glm-4-5v-reasoning",
+            "score": 5.3
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
             "score": 5.3
         },
         {

@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -62,6 +62,10 @@
         {
             "modelRef": "openai/gpt-5-2-medium",
             "score": 86.4
+        },
+        {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 86.1
         },
         {
             "modelRef": "openai/gpt-5-1-codex",
@@ -194,6 +198,10 @@
         {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct-2507-reasoning",
             "score": 79.0
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
+            "score": 78.9
         },
         {
             "modelRef": "aws/nova-2-0-pro-reasoning-medium",
@@ -490,6 +498,10 @@
         {
             "modelRef": "xai/grok-3",
             "score": 69.3
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
+            "score": 69.0
         },
         {
             "modelRef": "openai/gpt-oss-20b",

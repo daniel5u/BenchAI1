@@ -8,7 +8,7 @@
         "Knowledge",
         "Multi-Modal"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-30",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -59,6 +59,10 @@
         {
             "modelRef": "openai/gpt-5",
             "score": 26.5
+        },
+        {
+            "modelRef": "alibaba/qwen3-max-thinking",
+            "score": 26.2
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-speciale",
@@ -213,6 +217,10 @@
             "score": 12.3
         },
         {
+            "modelRef": "kimi/kimi-k2-5-non-reasoning",
+            "score": 12.3
+        },
+        {
             "modelRef": "zai/glm-4-5",
             "score": 12.2
         },
@@ -287,6 +295,10 @@
         {
             "modelRef": "anthropic/claude-3-7-sonnet-thinking",
             "score": 10.3
+        },
+        {
+            "modelRef": "stepfun/step3-vl-10b",
+            "score": 10.2
         },
         {
             "modelRef": "nvidia/nvidia-nemotron-3-nano-30b-a3b-reasoning",
