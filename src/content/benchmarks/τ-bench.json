@@ -8,7 +8,7 @@
         "Agent",
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-01-31",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -27,7 +27,7 @@
             "score": 84.7
         },
         {
-            "modelRef": "None/qwen3-max-thinkingnew",
+            "modelRef": "alibaba/qwen3-max-thinking",
             "score": 82.2
         },
         {
