@@ -33,7 +33,7 @@ TAU_META = {
 MODEL_TABULAR = {
         "gemini-3-0-pro": "gemini-3-pro",
         "claude-sonnet-4-5": "claude-4-5-sonnet",
-        "qwen3-max-thinking-new": "qwen3-max-thinking",
+        "qwen3-max-thinkingnew": "qwen3-max-thinking",
         "qwen3-max-thinking-preview": "qwen3-max-thinking"
         }
 
