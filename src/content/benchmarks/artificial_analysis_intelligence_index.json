@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-30",
+    "lastUpdated": "2026-02-01",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -109,7 +109,7 @@
         },
         {
             "modelRef": "alibaba/qwen3-max-thinking",
-            "score": 39.8
+            "score": 39.7
         },
         {
             "modelRef": "minimax/minimax-m2-1",
@@ -141,7 +141,7 @@
         },
         {
             "modelRef": "kimi/kimi-k2-5-non-reasoning",
-            "score": 37.5
+            "score": 37.2
         },
         {
             "modelRef": "anthropic/claude-4-5-sonnet",
