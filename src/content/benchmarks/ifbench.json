@@ -7,7 +7,7 @@
     "tags": [
         "Agent"
     ],
-    "lastUpdated": "2026-01-30",
+    "lastUpdated": "2026-02-07",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -288,6 +288,10 @@
             "score": 53.7
         },
         {
+            "modelRef": "anthropic/claude-opus-4-6-adaptive",
+            "score": 53.1
+        },
+        {
             "modelRef": "xai/grok-4-1-fast-reasoning",
             "score": 52.7
         },
@@ -421,6 +425,10 @@
         },
         {
             "modelRef": "inclusionai/ring-1t",
+            "score": 44.6
+        },
+        {
+            "modelRef": "anthropic/claude-opus-4-6",
             "score": 44.6
         },
         {
@@ -758,6 +766,10 @@
         {
             "modelRef": "openai/gpt-4o-2024-08-06",
             "score": 36.0
+        },
+        {
+            "modelRef": "alibaba/qwen3-coder-next",
+            "score": 35.2
         },
         {
             "modelRef": "ai21-labs/jamba-1-7-large",

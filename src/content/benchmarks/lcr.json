@@ -8,7 +8,7 @@
         "Long-Context",
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-30",
+    "lastUpdated": "2026-02-07",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -50,6 +50,10 @@
         },
         {
             "modelRef": "google/gemini-3-pro",
+            "score": 70.7
+        },
+        {
+            "modelRef": "anthropic/claude-opus-4-6-adaptive",
             "score": 70.7
         },
         {
@@ -109,10 +113,6 @@
             "score": 66.0
         },
         {
-            "modelRef": "kimi/kimi-k2-5",
-            "score": 66.0
-        },
-        {
             "modelRef": "google/gemini-2-5-pro",
             "score": 66.0
         },
@@ -123,6 +123,10 @@
         {
             "modelRef": "anthropic/claude-4-5-sonnet-thinking",
             "score": 65.7
+        },
+        {
+            "modelRef": "kimi/kimi-k2-5",
+            "score": 65.3
         },
         {
             "modelRef": "bytedance-seed/doubao-seed-code",
@@ -230,6 +234,10 @@
         },
         {
             "modelRef": "aws/nova-2-0-lite-reasoning-medium",
+            "score": 58.3
+        },
+        {
+            "modelRef": "anthropic/claude-opus-4-6",
             "score": 58.3
         },
         {
@@ -446,6 +454,10 @@
         },
         {
             "modelRef": "nvidia/nvidia-nemotron-nano-12b-v2-vl-reasoning",
+            "score": 40.0
+        },
+        {
+            "modelRef": "alibaba/qwen3-coder-next",
             "score": 40.0
         },
         {

@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-01-30",
+    "lastUpdated": "2026-02-07",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -34,6 +34,10 @@
         {
             "modelRef": "google/gemini-3-flash-reasoning",
             "score": 89.8
+        },
+        {
+            "modelRef": "anthropic/claude-opus-4-6-adaptive",
+            "score": 89.6
         },
         {
             "modelRef": "google/gemini-3-pro-low",
@@ -105,6 +109,10 @@
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-reasoning",
+            "score": 84.0
+        },
+        {
+            "modelRef": "anthropic/claude-opus-4-6",
             "score": 84.0
         },
         {
@@ -358,6 +366,10 @@
         {
             "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
             "score": 73.8
+        },
+        {
+            "modelRef": "alibaba/qwen3-coder-next",
+            "score": 73.7
         },
         {
             "modelRef": "deepseek/deepseek-v3-1",
