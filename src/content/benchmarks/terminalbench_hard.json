@@ -8,7 +8,7 @@
         "Agent",
         "Coding"
     ],
-    "lastUpdated": "2026-02-07",
+    "lastUpdated": "2026-02-11",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -135,6 +135,10 @@
         {
             "modelRef": "deepseek/deepseek-v3-1-terminus",
             "score": 31.8
+        },
+        {
+            "modelRef": "xiaomi/mimo-v2-0206",
+            "score": 31.1
         },
         {
             "modelRef": "kimi/kimi-k2-thinking",

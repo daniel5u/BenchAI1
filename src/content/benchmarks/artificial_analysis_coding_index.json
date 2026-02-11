@@ -7,7 +7,7 @@
     "tags": [
         "Coding"
     ],
-    "lastUpdated": "2026-02-07",
+    "lastUpdated": "2026-02-11",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -154,6 +154,10 @@
         {
             "modelRef": "deepseek/deepseek-v3-1-terminus-reasoning",
             "score": 33.7
+        },
+        {
+            "modelRef": "xiaomi/mimo-v2-0206",
+            "score": 33.5
         },
         {
             "modelRef": "anthropic/claude-4-5-sonnet",
