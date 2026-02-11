@@ -7,7 +7,7 @@
     "tags": [
         "Agent"
     ],
-    "lastUpdated": "2026-02-07",
+    "lastUpdated": "2026-02-11",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -58,6 +58,10 @@
         {
             "modelRef": "minimax/minimax-m2",
             "score": 72.3
+        },
+        {
+            "modelRef": "xiaomi/mimo-v2-0206",
+            "score": 71.8
         },
         {
             "modelRef": "openai/o3",

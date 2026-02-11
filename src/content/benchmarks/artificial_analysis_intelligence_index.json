@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-02-07",
+    "lastUpdated": "2026-02-11",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -92,6 +92,10 @@
             "score": 41.6
         },
         {
+            "modelRef": "xiaomi/mimo-v2-0206",
+            "score": 41.4
+        },
+        {
             "modelRef": "xai/grok-4",
             "score": 41.4
         },
@@ -102,10 +106,6 @@
         {
             "modelRef": "openai/gpt-5-mini",
             "score": 41.0
-        },
-        {
-            "modelRef": "openai/o3",
-            "score": 40.9
         },
         {
             "modelRef": "openai/o3-pro",
@@ -146,6 +146,10 @@
         {
             "modelRef": "openai/gpt-5-1-codex-mini",
             "score": 38.5
+        },
+        {
+            "modelRef": "openai/o3",
+            "score": 38.3
         },
         {
             "modelRef": "kimi/kimi-k2-5-non-reasoning",
