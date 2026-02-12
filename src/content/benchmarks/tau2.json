@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-02-11",
+    "lastUpdated": "2026-02-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -23,6 +23,10 @@
         {
             "modelRef": "zai/glm-4-7-flash",
             "score": 98.8
+        },
+        {
+            "modelRef": "zai/glm-5",
+            "score": 98.2
         },
         {
             "modelRef": "zai/glm-4-7",

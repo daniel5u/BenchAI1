@@ -7,7 +7,7 @@
     "tags": [
         "Coding"
     ],
-    "lastUpdated": "2026-02-11",
+    "lastUpdated": "2026-02-12",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -46,6 +46,10 @@
         {
             "modelRef": "openai/gpt-5-1",
             "score": 44.7
+        },
+        {
+            "modelRef": "zai/glm-5",
+            "score": 44.2
         },
         {
             "modelRef": "openai/gpt-5-2-medium",

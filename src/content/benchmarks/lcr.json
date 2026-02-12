@@ -8,7 +8,7 @@
         "Long-Context",
         "Reasoning"
     ],
-    "lastUpdated": "2026-02-11",
+    "lastUpdated": "2026-02-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -167,6 +167,10 @@
         {
             "modelRef": "openai/gpt-5-chatgpt",
             "score": 63.7
+        },
+        {
+            "modelRef": "zai/glm-5",
+            "score": 63.3
         },
         {
             "modelRef": "openai/gpt-5-2-medium",
