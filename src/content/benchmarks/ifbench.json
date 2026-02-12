@@ -7,7 +7,7 @@
     "tags": [
         "Agent"
     ],
-    "lastUpdated": "2026-02-11",
+    "lastUpdated": "2026-02-12",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -54,6 +54,10 @@
         {
             "modelRef": "openai/gpt-5-1",
             "score": 72.9
+        },
+        {
+            "modelRef": "zai/glm-5",
+            "score": 72.3
         },
         {
             "modelRef": "minimax/minimax-m2",
