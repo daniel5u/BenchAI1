@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-02-14",
     "metrics": {
         "unit": "Index",
         "isBetterHigher": true
@@ -88,6 +88,10 @@
             "score": 42.0
         },
         {
+            "modelRef": "minimax/minimax-m2-5",
+            "score": 42.0
+        },
+        {
             "modelRef": "openai/gpt-5-medium",
             "score": 41.8
         },
@@ -118,6 +122,10 @@
         {
             "modelRef": "kimi/kimi-k2-thinking",
             "score": 40.7
+        },
+        {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 40.5
         },
         {
             "modelRef": "alibaba/qwen3-max-thinking",
@@ -524,10 +532,6 @@
             "score": 22.6
         },
         {
-            "modelRef": "mistral/magistral-small-2509",
-            "score": 22.5
-        },
-        {
             "modelRef": "inclusionai/ring-1t",
             "score": 22.5
         },
@@ -668,6 +672,10 @@
             "score": 18.8
         },
         {
+            "modelRef": "mistral/mistral-medium-3",
+            "score": 18.7
+        },
+        {
             "modelRef": "mistral/magistral-medium",
             "score": 18.7
         },
@@ -712,6 +720,10 @@
             "score": 18.3
         },
         {
+            "modelRef": "mistral/magistral-small-2509",
+            "score": 18.1
+        },
+        {
             "modelRef": "google/gemini-2-0-pro-experimental-02-05",
             "score": 18.1
         },
@@ -732,12 +744,16 @@
             "score": 17.8
         },
         {
-            "modelRef": "mistral/mistral-medium-3",
+            "modelRef": "nous-research/hermes-4-llama-3-1-405b",
             "score": 17.6
         },
         {
             "modelRef": "google/gemini-2-5-flash-lite-reasoning",
             "score": 17.4
+        },
+        {
+            "modelRef": "openai/gpt-4o",
+            "score": 17.3
         },
         {
             "modelRef": "deepseek/deepseek-r1-distill-qwen-32b",
@@ -749,10 +765,6 @@
         },
         {
             "modelRef": "zai/glm-4-6v",
-            "score": 17.1
-        },
-        {
-            "modelRef": "nous-research/hermes-4-llama-3-1-405b",
             "score": 17.1
         },
         {
@@ -801,6 +813,10 @@
         },
         {
             "modelRef": "upstage/solar-pro-2-preview",
+            "score": 16.0
+        },
+        {
+            "modelRef": "openai/gpt-4o-2024-05-13",
             "score": 16.0
         },
         {
@@ -876,10 +892,6 @@
             "score": 15.1
         },
         {
-            "modelRef": "inclusionai/ling-mini-2-0",
-            "score": 15.1
-        },
-        {
             "modelRef": "nvidia/llama-3-1-nemotron-ultra-253b-v1-reasoning",
             "score": 15.0
         },
@@ -908,10 +920,6 @@
             "score": 14.9
         },
         {
-            "modelRef": "openai/gpt-4o",
-            "score": 14.8
-        },
-        {
             "modelRef": "nvidia/nvidia-nemotron-nano-9b-v2-reasoning",
             "score": 14.8
         },
@@ -926,10 +934,6 @@
         {
             "modelRef": "mistral/ministral-3-8b",
             "score": 14.6
-        },
-        {
-            "modelRef": "openai/gpt-4o-2024-05-13",
-            "score": 14.5
         },
         {
             "modelRef": "nvidia/llama-nemotron-super-49b-v1-5",
@@ -954,10 +958,6 @@
         {
             "modelRef": "kimi/kimi-linear-48b-a3b-instruct",
             "score": 14.4
-        },
-        {
-            "modelRef": "reka-ai/reka-flash-3",
-            "score": 14.3
         },
         {
             "modelRef": "nvidia/llama-3-3-nemotron-super-49b",
@@ -1054,10 +1054,6 @@
         {
             "modelRef": "nvidia/nvidia-nemotron-3-nano-30b-a3b",
             "score": 13.3
-        },
-        {
-            "modelRef": "azure/phi-4",
-            "score": 13.2
         },
         {
             "modelRef": "alibaba/qwen3-4b-2507-instruct",
@@ -1176,10 +1172,6 @@
             "score": 12.0
         },
         {
-            "modelRef": "upstage/solar-mini",
-            "score": 11.9
-        },
-        {
             "modelRef": "meta/llama-3-2-instruct-90b-vision",
             "score": 11.9
         },
@@ -1260,6 +1252,10 @@
             "score": 10.5
         },
         {
+            "modelRef": "azure/phi-4",
+            "score": 10.5
+        },
+        {
             "modelRef": "aws/nova-micro",
             "score": 10.3
         },
@@ -1320,12 +1316,12 @@
             "score": 9.7
         },
         {
-            "modelRef": "meta/llama-2-chat-7b",
+            "modelRef": "google/gemma-3n-e2b",
             "score": 9.7
         },
         {
-            "modelRef": "google/gemma-3n-e2b",
-            "score": 9.7
+            "modelRef": "reka-ai/reka-flash-3",
+            "score": 9.5
         },
         {
             "modelRef": "alibaba/qwen3-vl-4b-instruct",
@@ -1388,6 +1384,10 @@
             "score": 9.0
         },
         {
+            "modelRef": "inclusionai/ling-mini-2-0",
+            "score": 8.9
+        },
+        {
             "modelRef": "snowflake/arctic-instruct",
             "score": 8.8
         },
@@ -1424,14 +1424,6 @@
             "score": 8.5
         },
         {
-            "modelRef": "meta/llama-2-chat-70b",
-            "score": 8.4
-        },
-        {
-            "modelRef": "meta/llama-2-chat-13b",
-            "score": 8.4
-        },
-        {
             "modelRef": "google/gemma-3-270m",
             "score": 8.4
         },
@@ -1466,6 +1458,10 @@
         {
             "modelRef": "ai2/olmo-3-7b-instruct",
             "score": 8.1
+        },
+        {
+            "modelRef": "upstage/solar-mini",
+            "score": 8.0
         },
         {
             "modelRef": "liquidai/lfm2-5-1-2b-instruct",
@@ -1508,10 +1504,6 @@
             "score": 7.4
         },
         {
-            "modelRef": "meta/llama-65b",
-            "score": 7.4
-        },
-        {
             "modelRef": "cohere/command-r-03-2024",
             "score": 7.4
         },
@@ -1530,6 +1522,10 @@
         {
             "modelRef": "ai21-labs/jamba-1-7-mini",
             "score": 7.3
+        },
+        {
+            "modelRef": "meta/llama-2-chat-70b",
+            "score": 7.0
         },
         {
             "modelRef": "liquidai/lfm2-8b-a1b",
@@ -1570,6 +1566,18 @@
         {
             "modelRef": "ibm/granite-4-0-h-350m",
             "score": 5.3
+        },
+        {
+            "modelRef": "meta/llama-2-chat-13b",
+            "score": 5.0
+        },
+        {
+            "modelRef": "meta/llama-65b",
+            "score": 4.0
+        },
+        {
+            "modelRef": "meta/llama-2-chat-7b",
+            "score": 4.0
         }
     ]
 }

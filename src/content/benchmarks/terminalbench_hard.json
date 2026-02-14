@@ -8,7 +8,7 @@
         "Agent",
         "Coding"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-02-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -57,6 +57,10 @@
             "score": 40.9
         },
         {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 39.4
+        },
+        {
             "modelRef": "google/gemini-3-flash-reasoning",
             "score": 38.6
         },
@@ -90,6 +94,10 @@
         },
         {
             "modelRef": "openai/gpt-5-1-codex",
+            "score": 34.8
+        },
+        {
+            "modelRef": "minimax/minimax-m2-5",
             "score": 34.8
         },
         {
