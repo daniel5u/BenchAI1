@@ -7,7 +7,7 @@
     "tags": [
         "Agent"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-02-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -66,6 +66,10 @@
         {
             "modelRef": "xiaomi/mimo-v2-0206",
             "score": 71.8
+        },
+        {
+            "modelRef": "minimax/minimax-m2-5",
+            "score": 71.6
         },
         {
             "modelRef": "openai/o3",
@@ -254,6 +258,10 @@
         {
             "modelRef": "anthropic/claude-4-1-opus-thinking",
             "score": 55.4
+        },
+        {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 55.2
         },
         {
             "modelRef": "mbzuai/k2-v2-medium",

@@ -7,7 +7,7 @@
     "tags": [
         "Knowledge"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-02-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -86,6 +86,10 @@
         {
             "modelRef": "xai/grok-4-1-fast-reasoning",
             "score": 85.3
+        },
+        {
+            "modelRef": "minimax/minimax-m2-5",
+            "score": 84.8
         },
         {
             "modelRef": "xai/grok-4-fast-reasoning",
@@ -602,6 +606,10 @@
         {
             "modelRef": "alibaba/qwen3-4b-2507-instruct-reasoning",
             "score": 66.7
+        },
+        {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 66.6
         },
         {
             "modelRef": "openai/gpt-4-1",

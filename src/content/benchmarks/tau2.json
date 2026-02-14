@@ -8,7 +8,7 @@
         "Reasoning",
         "Knowledge"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-02-14",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -29,12 +29,20 @@
             "score": 98.2
         },
         {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 97.4
+        },
+        {
             "modelRef": "zai/glm-4-7",
             "score": 95.9
         },
         {
             "modelRef": "kimi/kimi-k2-5",
             "score": 95.9
+        },
+        {
+            "modelRef": "minimax/minimax-m2-5",
+            "score": 95.3
         },
         {
             "modelRef": "xiaomi/mimo-v2-flash-reasoning",
