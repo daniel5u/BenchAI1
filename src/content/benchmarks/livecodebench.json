@@ -7,7 +7,7 @@
     "tags": [
         "Coding"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-04-08",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -273,6 +273,10 @@
         },
         {
             "modelRef": "minimax/minimax-m1-80k",
+            "score": 71.1
+        },
+        {
+            "modelRef": "aws/nova-2-0-lite-reasoning",
             "score": 71.1
         },
         {
@@ -902,6 +906,10 @@
         {
             "modelRef": "meta/llama-4-scout",
             "score": 29.9
+        },
+        {
+            "modelRef": "sarvam/sarvam-m-reasoning",
+            "score": 29.5
         },
         {
             "modelRef": "perplexity/sonar",

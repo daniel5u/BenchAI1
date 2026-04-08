@@ -8,7 +8,7 @@
         "Knowledge",
         "Multi-Modal"
     ],
-    "lastUpdated": "2026-02-12",
+    "lastUpdated": "2026-04-08",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -20,6 +20,18 @@
         "initialWeight": 1000
     },
     "snapshot": [
+        {
+            "modelRef": "google/gemini-3-1-pro-preview",
+            "score": 44.7
+        },
+        {
+            "modelRef": "openai/gpt-5-4",
+            "score": 41.6
+        },
+        {
+            "modelRef": "openai/gpt-5-3-codex",
+            "score": 39.9
+        },
         {
             "modelRef": "google/gemini-3-pro",
             "score": 37.2
@@ -45,6 +57,14 @@
             "score": 33.4
         },
         {
+            "modelRef": "xai/grok-4-20",
+            "score": 30.0
+        },
+        {
+            "modelRef": "anthropic/claude-sonnet-4-6-adaptive",
+            "score": 30.0
+        },
+        {
             "modelRef": "kimi/kimi-k2-5",
             "score": 29.4
         },
@@ -53,12 +73,36 @@
             "score": 28.4
         },
         {
+            "modelRef": "xiaomi/mimo-v2-pro",
+            "score": 28.3
+        },
+        {
+            "modelRef": "minimax/minimax-m2-7",
+            "score": 28.1
+        },
+        {
+            "modelRef": "zai/glm-5-1",
+            "score": 28.0
+        },
+        {
             "modelRef": "google/gemini-3-pro-low",
             "score": 27.6
         },
         {
+            "modelRef": "alibaba/qwen3-5-397b-a17b",
+            "score": 27.3
+        },
+        {
             "modelRef": "zai/glm-5",
             "score": 27.2
+        },
+        {
+            "modelRef": "openai/gpt-5-4-mini",
+            "score": 26.6
+        },
+        {
+            "modelRef": "openai/gpt-5-4-nano",
+            "score": 26.5
         },
         {
             "modelRef": "openai/gpt-5-1",
@@ -81,6 +125,10 @@
             "score": 25.6
         },
         {
+            "modelRef": "zai/glm-5-turbo",
+            "score": 25.4
+        },
+        {
             "modelRef": "zai/glm-4-7",
             "score": 25.1
         },
@@ -101,6 +149,18 @@
             "score": 23.4
         },
         {
+            "modelRef": "alibaba/qwen3-5-122b-a10b",
+            "score": 23.4
+        },
+        {
+            "modelRef": "google/gemma-4-31b",
+            "score": 22.7
+        },
+        {
+            "modelRef": "xai/grok-4-20-non-reasoning",
+            "score": 22.5
+        },
+        {
             "modelRef": "kimi/kimi-k2-thinking",
             "score": 22.3
         },
@@ -110,6 +170,10 @@
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-reasoning",
+            "score": 22.2
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-27b",
             "score": 22.2
         },
         {
@@ -129,8 +193,32 @@
             "score": 20.0
         },
         {
+            "modelRef": "xiaomi/mimo-v2-omni",
+            "score": 19.9
+        },
+        {
             "modelRef": "openai/gpt-5-mini",
             "score": 19.7
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-35b-a3b",
+            "score": 19.7
+        },
+        {
+            "modelRef": "nvidia/nvidia-nemotron-3-super-120b-a12b",
+            "score": 19.2
+        },
+        {
+            "modelRef": "stepfun/step-3-5-flash",
+            "score": 19.1
+        },
+        {
+            "modelRef": "minimax/minimax-m2-5",
+            "score": 19.1
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-397b-a17b-non-reasoning",
+            "score": 18.8
         },
         {
             "modelRef": "anthropic/claude-opus-4-6",
@@ -145,6 +233,10 @@
             "score": 18.4
         },
         {
+            "modelRef": "google/gemma-4-26b-a4b",
+            "score": 18.3
+        },
+        {
             "modelRef": "xai/grok-4-1-fast-reasoning",
             "score": 17.6
         },
@@ -157,6 +249,10 @@
             "score": 17.3
         },
         {
+            "modelRef": "openai/gpt-5-4-mini-medium",
+            "score": 17.1
+        },
+        {
             "modelRef": "google/gemini-2-5-pro-03-25",
             "score": 17.1
         },
@@ -167,6 +263,22 @@
         {
             "modelRef": "openai/gpt-5-1-codex-mini",
             "score": 16.9
+        },
+        {
+            "modelRef": "google/gemini-3-1-flash-lite-preview",
+            "score": 16.2
+        },
+        {
+            "modelRef": "kwaikat/kat-coder-pro-v2",
+            "score": 16.0
+        },
+        {
+            "modelRef": "zai/glm-5v-turbo",
+            "score": 15.8
+        },
+        {
+            "modelRef": "inception/mercury-2",
+            "score": 15.5
         },
         {
             "modelRef": "google/gemini-2-5-pro-05-06",
@@ -185,12 +297,24 @@
             "score": 14.9
         },
         {
+            "modelRef": "alibaba/qwen3-5-122b-a10b-non-reasoning",
+            "score": 14.8
+        },
+        {
+            "modelRef": "openai/gpt-5-4-nano-medium",
+            "score": 14.7
+        },
+        {
             "modelRef": "openai/gpt-5-mini-medium",
             "score": 14.6
         },
         {
             "modelRef": "google/gemini-3-flash",
             "score": 14.1
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-omni-plus",
+            "score": 13.9
         },
         {
             "modelRef": "deepseek/deepseek-v3-2-reasoning-0925",
@@ -205,6 +329,18 @@
             "score": 13.3
         },
         {
+            "modelRef": "alibaba/qwen3-5-9b",
+            "score": 13.3
+        },
+        {
+            "modelRef": "anthropic/claude-sonnet-4-6",
+            "score": 13.2
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-27b-non-reasoning",
+            "score": 13.2
+        },
+        {
             "modelRef": "lg/k-exaone",
             "score": 13.1
         },
@@ -215,6 +351,10 @@
         {
             "modelRef": "anthropic/claude-opus-4-5",
             "score": 12.9
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-35b-a3b-non-reasoning",
+            "score": 12.8
         },
         {
             "modelRef": "google/gemini-2-5-flash-preview-09-2025-reasoning",
@@ -273,6 +413,14 @@
             "score": 11.6
         },
         {
+            "modelRef": "google/gemma-4-31b-non-reasoning",
+            "score": 11.5
+        },
+        {
+            "modelRef": "nvidia/nemotron-cascade-2-30b-a3b",
+            "score": 11.4
+        },
+        {
             "modelRef": "xai/grok-3-mini-reasoning",
             "score": 11.1
         },
@@ -289,8 +437,24 @@
             "score": 11.0
         },
         {
+            "modelRef": "aws/nova-2-0-lite-reasoning",
+            "score": 10.9
+        },
+        {
             "modelRef": "tii-uae/falcon-h1r-7b",
             "score": 10.8
+        },
+        {
+            "modelRef": "anthropic/claude-sonnet-4-6-non-reasoning-low-effort",
+            "score": 10.8
+        },
+        {
+            "modelRef": "google/gemma-4-26b-a4b-non-reasoning",
+            "score": 10.7
+        },
+        {
+            "modelRef": "openai/gpt-5-4-non-reasoning",
+            "score": 10.6
         },
         {
             "modelRef": "alibaba/qwen3-235b-a22b-instruct-2507",
@@ -313,7 +477,7 @@
             "score": 10.3
         },
         {
-            "modelRef": "stepfun/step3-vl-10b",
+            "modelRef": "stepfun/step-3-vl-10b",
             "score": 10.2
         },
         {
@@ -325,8 +489,20 @@
             "score": 10.2
         },
         {
+            "modelRef": "upstage/solar-pro-3",
+            "score": 10.1
+        },
+        {
+            "modelRef": "sarvam/sarvam-105b",
+            "score": 10.1
+        },
+        {
             "modelRef": "alibaba/qwen3-vl-235b-a22b-reasoning",
             "score": 10.1
+        },
+        {
+            "modelRef": "nanbeige/nanbeige4-1-3b",
+            "score": 10.0
         },
         {
             "modelRef": "servicenow/apriel-v1-6-15b-thinker",
@@ -359,6 +535,10 @@
         {
             "modelRef": "alibaba/qwen3-vl-32b-reasoning",
             "score": 9.6
+        },
+        {
+            "modelRef": "mistral/mistral-small-4",
+            "score": 9.5
         },
         {
             "modelRef": "mistral/magistral-medium",
@@ -421,6 +601,10 @@
             "score": 8.6
         },
         {
+            "modelRef": "alibaba/qwen3-5-9b-non-reasoning",
+            "score": 8.6
+        },
+        {
             "modelRef": "deepseek/deepseek-v3-1-terminus",
             "score": 8.4
         },
@@ -465,6 +649,10 @@
             "score": 7.8
         },
         {
+            "modelRef": "alibaba/qwen3-5-4b",
+            "score": 7.8
+        },
+        {
             "modelRef": "openai/o1",
             "score": 7.7
         },
@@ -485,6 +673,10 @@
             "score": 7.5
         },
         {
+            "modelRef": "alibaba/qwen3-5-4b-non-reasoning",
+            "score": 7.5
+        },
+        {
             "modelRef": "perplexity/sonar",
             "score": 7.3
         },
@@ -499,6 +691,10 @@
         {
             "modelRef": "alibaba/qwen3-next-80b-a3b-instruct",
             "score": 7.3
+        },
+        {
+            "modelRef": "zai/glm-5-non-reasoning",
+            "score": 7.2
         },
         {
             "modelRef": "mistral/magistral-small",
@@ -521,7 +717,15 @@
             "score": 7.1
         },
         {
+            "modelRef": "alibaba/qwen3-5-omni-flash",
+            "score": 7.1
+        },
+        {
             "modelRef": "upstage/solar-pro-2-reasoning",
+            "score": 7.0
+        },
+        {
+            "modelRef": "sarvam/sarvam-30b",
             "score": 7.0
         },
         {
@@ -605,6 +809,10 @@
             "score": 6.1
         },
         {
+            "modelRef": "trillionlabs/tri-21b-think-v0-5",
+            "score": 6.1
+        },
+        {
             "modelRef": "mistral/magistral-small-2509",
             "score": 6.1
         },
@@ -615,6 +823,10 @@
         {
             "modelRef": "deepseek/deepseek-r1-distill-llama-70b",
             "score": 6.1
+        },
+        {
+            "modelRef": "longcat/longcat-flash-lite",
+            "score": 6.0
         },
         {
             "modelRef": "ai2/olmo-3-1-32b-think",
@@ -661,6 +873,14 @@
             "score": 5.7
         },
         {
+            "modelRef": "trillionlabs/tri-21b-think-preview",
+            "score": 5.7
+        },
+        {
+            "modelRef": "openai/gpt-5-4-mini-non-reasoning",
+            "score": 5.7
+        },
+        {
             "modelRef": "liquidai/lfm2-1-2b",
             "score": 5.7
         },
@@ -679,6 +899,10 @@
         {
             "modelRef": "deepseek/deepseek-r1-qwen3-8b",
             "score": 5.6
+        },
+        {
+            "modelRef": "swiss-ai-initiative/apertus-70b-instruct",
+            "score": 5.5
         },
         {
             "modelRef": "naver/hyperclova-x-seed-think-32b",
@@ -754,6 +978,10 @@
         },
         {
             "modelRef": "deepseek/deepseek-v3-0324",
+            "score": 5.2
+        },
+        {
+            "modelRef": "cohere/tiny-aya-global",
             "score": 5.2
         },
         {
@@ -833,6 +1061,10 @@
             "score": 5.0
         },
         {
+            "modelRef": "swiss-ai-initiative/apertus-8b-instruct",
+            "score": 5.0
+        },
+        {
             "modelRef": "openai/gpt-5-mini-minimal",
             "score": 5.0
         },
@@ -889,6 +1121,14 @@
             "score": 4.9
         },
         {
+            "modelRef": "alibaba/qwen3-5-2b-non-reasoning",
+            "score": 4.9
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-0-8b-non-reasoning",
+            "score": 4.9
+        },
+        {
             "modelRef": "ai2/olmo-3-1-32b-instruct",
             "score": 4.9
         },
@@ -897,11 +1137,19 @@
             "score": 4.8
         },
         {
+            "modelRef": "nvidia/nvidia-nemotron-3-nano-4b",
+            "score": 4.8
+        },
+        {
             "modelRef": "mistral/mistral-small-3-1",
             "score": 4.8
         },
         {
             "modelRef": "meta/llama-4-maverick",
+            "score": 4.8
+        },
+        {
+            "modelRef": "google/gemma-4-e2b",
             "score": 4.8
         },
         {
@@ -934,6 +1182,10 @@
         },
         {
             "modelRef": "meta/llama-2-chat-13b",
+            "score": 4.7
+        },
+        {
+            "modelRef": "google/gemma-4-e4b-non-reasoning",
             "score": 4.7
         },
         {
@@ -1025,6 +1277,10 @@
             "score": 4.5
         },
         {
+            "modelRef": "google/gemma-4-e2b-non-reasoning",
+            "score": 4.5
+        },
+        {
             "modelRef": "google/gemini-1-5-flash-8b",
             "score": 4.5
         },
@@ -1054,6 +1310,10 @@
         },
         {
             "modelRef": "mbzuai/k2-v2-medium",
+            "score": 4.4
+        },
+        {
+            "modelRef": "liquidai/lfm2-24b-a2b",
             "score": 4.4
         },
         {
@@ -1131,6 +1391,10 @@
         {
             "modelRef": "alibaba/qwen3-14b-instruct-reasoning",
             "score": 4.3
+        },
+        {
+            "modelRef": "openai/gpt-5-4-nano-non-reasoning",
+            "score": 4.2
         },
         {
             "modelRef": "nous-research/hermes-4-llama-3-1-405b",
@@ -1285,6 +1549,10 @@
             "score": 3.9
         },
         {
+            "modelRef": "anthropic/claude-3-haiku",
+            "score": 3.9
+        },
+        {
             "modelRef": "xai/grok-2-1212",
             "score": 3.8
         },
@@ -1329,11 +1597,19 @@
             "score": 3.7
         },
         {
+            "modelRef": "mistral/mistral-small-4-non-reasoning",
+            "score": 3.7
+        },
+        {
             "modelRef": "mistral/devstral-small",
             "score": 3.7
         },
         {
             "modelRef": "ibm/granite-4-0-h-small",
+            "score": 3.7
+        },
+        {
+            "modelRef": "google/gemma-4-e4b",
             "score": 3.7
         },
         {
@@ -1421,6 +1697,10 @@
             "score": 3.4
         },
         {
+            "modelRef": "sarvam/sarvam-m-reasoning",
+            "score": 3.3
+        },
+        {
             "modelRef": "openai/gpt-4o",
             "score": 3.3
         },
@@ -1467,6 +1747,14 @@
         {
             "modelRef": "kimi/kimi-linear-48b-a3b-instruct",
             "score": 2.7
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-2b",
+            "score": 2.1
+        },
+        {
+            "modelRef": "alibaba/qwen3-5-0-8b",
+            "score": 1.2
         }
     ]
 }
