@@ -7,7 +7,7 @@
     "tags": [
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-25",
+    "lastUpdated": "2026-04-08",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -402,6 +402,10 @@
         {
             "modelRef": "openai/gpt-4-1-nano",
             "score": 84.8
+        },
+        {
+            "modelRef": "sarvam/sarvam-m-reasoning",
+            "score": 84.7
         },
         {
             "modelRef": "meta/llama-4-scout",

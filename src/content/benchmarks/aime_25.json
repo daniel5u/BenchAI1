@@ -7,7 +7,7 @@
     "tags": [
         "Reasoning"
     ],
-    "lastUpdated": "2026-01-28",
+    "lastUpdated": "2026-04-08",
     "metrics": {
         "unit": "pass@1(%)",
         "isBetterHigher": true
@@ -65,6 +65,10 @@
         },
         {
             "modelRef": "openai/gpt-5",
+            "score": 94.3
+        },
+        {
+            "modelRef": "aws/nova-2-0-lite-reasoning",
             "score": 94.3
         },
         {
